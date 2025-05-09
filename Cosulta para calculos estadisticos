@@ -1,0 +1,27 @@
+//para contar el nuemro de documentos
+db.productos.aggregate([
+  {
+    $count: "totalProductos" 
+  }
+])
+
+//suma
+db.productos.aggregate([
+  {
+    $group: {
+      _id: null,           // Agrupa todos los documentos en un solo grupo
+      sumaTotalPrecios: { $sum: "$precio" } // Suma los valores del campo 'precio'
+    }
+  }
+])
+
+
+//Promedio
+db.productos.aggregate([
+  {
+    $group: {
+      _id: null,           // Agrupa todos los documentos
+      precioPromedio: { $avg: "$precio" } // Calcula el promedio del campo 'precio'
+    }
+  }
+])
