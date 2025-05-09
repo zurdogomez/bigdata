@@ -1,0 +1,3 @@
+db.productos.deleteOne(
+  { SKU: "CLO-TSH-BAS-BLK-S" } // Filtro: encuentra el documento con este SKU
+)
