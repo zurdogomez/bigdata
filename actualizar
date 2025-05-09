@@ -1,0 +1,8 @@
+db.productos.updateOne(
+  {
+    SKU: "CLO-TSH-BAS-BLK-S",
+    "variantes.color": "Negro", // Filtra el documento y verifica si alguna variante es color Negro
+    "variantes.talla": "M"      // Y si alguna variante es talla M 
+  },
+  { $set: { "variantes.$.cantidad_inventario": 70 } } // Actualización: usa el operador posicional $ para actualizar el primer elemento del array 'variantes' que coincidió con el filtro
+)
