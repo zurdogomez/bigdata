@@ -1,0 +1,4 @@
+db.productos.find({ categoria: "Electrónica" })
+
+//selecciona presios por debajo de 50
+db.productos.find({ precio: { $lte: 50 } })
