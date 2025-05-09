@@ -1,0 +1,2240 @@
+db.productos.insertMany([
+  {
+    "nombre": "Camiseta Básica de Algodón",
+    "descripcion": "Una camiseta suave y cómoda para el día a día.",
+    "precio": 15.99,
+    "categoria": "Ropa",
+    "SKU": "CLO-TSH-BAS-BLK-S",
+    "etiquetas": ["camiseta", "algodon", "basica", "ropa"],
+    "proveedor": { "nombre": "Textiles Confort", "pais": "Colombia" },
+    "variantes": [
+      { "color": "Negro", "talla": "S", "cantidad_inventario": 50 },
+      { "color": "Negro", "talla": "M", "cantidad_inventario": 60 },
+      { "color": "Blanco", "talla": "S", "cantidad_inventario": 45 },
+      { "color": "Blanco", "talla": "M", "cantidad_inventario": 55 }
+    ],
+    "fecha_creacion": "2023-10-01T10:00:00Z"
+  },
+  {
+    "nombre": "Pantalón Vaquero Recto",
+    "descripcion": "Vaqueros clásicos de corte recto, duraderos y cómodos.",
+    "precio": 39.50,
+    "categoria": "Ropa",
+    "SKU": "CLO-JNS-STR-BLU-32",
+    "etiquetas": ["pantalon", "vaquero", "mezclilla", "recto"],
+    "proveedor": { "nombre": "Denim Masters", "pais": "México" },
+    "variantes": [
+      { "color": "Azul Medio", "talla": "32", "cantidad_inventario": 30 },
+      { "color": "Azul Medio", "talla": "34", "cantidad_inventario": 35 },
+      { "color": "Azul Oscuro", "talla": "32", "cantidad_inventario": 28 }
+    ],
+    "fecha_creacion": "2023-10-05T11:30:00Z"
+  },
+  {
+    "nombre": "Zapatillas Deportivas Urbanas",
+    "descripcion": "Calzado deportivo ligero ideal para la ciudad.",
+    "precio": 55.00,
+    "categoria": "Calzado",
+    "SKU": "SHU-SNK-URB-GRY-42",
+    "etiquetas": ["zapatillas", "deportivas", "urbanas", "calzado"],
+    "proveedor": { "nombre": "Urban Steps", "pais": "España" },
+    "variantes": [
+      { "color": "Gris", "talla": "42", "cantidad_inventario": 20 },
+      { "color": "Gris", "talla": "43", "cantidad_inventario": 22 },
+      { "color": "Negro", "talla": "42", "cantidad_inventario": 18 }
+    ],
+    "fecha_creacion": "2023-10-10T09:00:00Z"
+  },
+  {
+    "nombre": "Smartwatch Modelo X",
+    "descripcion": "Reloj inteligente con monitor de actividad y notificaciones.",
+    "precio": 120.00,
+    "categoria": "Electrónica",
+    "SKU": "ELE-SMW-MODX-BLK",
+    "etiquetas": ["smartwatch", "reloj", "inteligente", "tecnologia", "wearable"],
+    "proveedor": { "nombre": "Tecno Global", "pais": "China" },
+    "variantes": [
+      { "color": "Negro", "cantidad_inventario": 40 },
+      { "color": "Plata", "cantidad_inventario": 35 }
+    ],
+    "fecha_creacion": "2023-10-15T14:00:00Z"
+  },
+  {
+    "nombre": "Auriculares Inalámbricos Bluetooth",
+    "descripcion": "Sonido de alta fidelidad con cancelación de ruido.",
+    "precio": 85.75,
+    "categoria": "Electrónica",
+    "SKU": "ELE-EPH-WRL-ANC",
+    "etiquetas": ["auriculares", "inalambricos", "bluetooth", "sonido"],
+    "proveedor": { "nombre": "Audio Supreme", "pais": "Japón" },
+    "variantes": [
+      { "color": "Negro", "cantidad_inventario": 60 },
+      { "color": "Blanco", "cantidad_inventario": 55 }
+    ],
+    "fecha_creacion": "2023-10-18T16:30:00Z"
+  },
+  {
+    "nombre": "Libro: Cien Años de Soledad",
+    "descripcion": "Novela del premio Nobel Gabriel García Márquez.",
+    "precio": 12.00,
+    "categoria": "Libros",
+    "SKU": "BOK-NOV-CIEN-GGM",
+    "etiquetas": ["libro", "novela", "literatura", "ficcion", "garcia marquez"],
+    "proveedor": { "nombre": "Editorial Ficticia", "pais": "Colombia" },
+    "variantes": [
+      { "formato": "Tapa Blanda", "cantidad_inventario": 100 },
+      { "formato": "Ebook", "cantidad_inventario": -1 } // -1 podría indicar stock ilimitado para digital
+    ],
+    "fecha_creacion": "2023-11-01T08:00:00Z"
+  },
+  {
+    "nombre": "Juego de Sartenes Antiadherentes",
+    "descripcion": "Set de 3 sartenes de diferentes tamaños para tu cocina.",
+    "precio": 45.90,
+    "categoria": "Hogar",
+    "SKU": "HOM-KIT-PAN-SET",
+    "etiquetas": ["sartenes", "cocina", "hogar", "antiadherente"],
+    "proveedor": { "nombre": "Kitchen Essentials", "pais": "Alemania" },
+    "variantes": [
+      { "tamaño": "Set de 3", "cantidad_inventario": 70 }
+    ],
+    "fecha_creacion": "2023-11-05T12:00:00Z"
+  },
+  {
+    "nombre": "Lámpara de Escritorio LED",
+    "descripcion": "Luz LED ajustable con diferentes niveles de brillo.",
+    "precio": 25.00,
+    "categoria": "Hogar",
+    "SKU": "HOM-LGT-DSK-LED",
+    "etiquetas": ["lampara", "escritorio", "led", "iluminacion"],
+    "proveedor": { "nombre": "Bright Homes", "pais": "Corea del Sur" },
+    "variantes": [
+      { "color": "Negro", "cantidad_inventario": 40 },
+      { "color": "Blanco", "cantidad_inventario": 38 }
+    ],
+    "fecha_creacion": "2023-11-10T15:00:00Z"
+  },
+  {
+    "nombre": "Mochila Urbana con Puerto USB",
+    "descripcion": "Mochila resistente con compartimento para laptop y puerto de carga.",
+    "precio": 35.70,
+    "categoria": "Accesorios",
+    "SKU": "ACC-BAG-URB-USB",
+    "etiquetas": ["mochila", "urbana", "usb", "viaje", "laptop"],
+    "proveedor": { "nombre": "Travel Gear Pro", "pais": "Vietnam" },
+    "variantes": [
+      { "color": "Gris Oscuro", "cantidad_inventario": 55 }
+    ],
+    "fecha_creacion": "2023-11-12T09:30:00Z"
+  },
+  {
+    "nombre": "Kit de Herramientas Esenciales",
+    "descripcion": "Caja básica con las herramientas más usadas en el hogar.",
+    "precio": 50.00,
+    "categoria": "Bricolaje",
+    "SKU": "DIY-KIT-TOOL-ESS",
+    "etiquetas": ["herramientas", "bricolaje", "hogar", "kit"],
+    "proveedor": { "nombre": "Handy Solutions", "pais": "Estados Unidos" },
+    "variantes": [
+      { "cantidad_inventario": 30 }
+    ],
+    "fecha_creacion": "2023-11-15T11:00:00Z"
+  },
+    {
+    "nombre": "Suéter de Lana Merino",
+    "descripcion": "Suéter elegante y cálido de lana merino.",
+    "precio": 75.00,
+    "categoria": "Ropa",
+    "SKU": "CLO-SWT-MER-NAV-M",
+    "etiquetas": ["sueter", "lana", "merino", "ropa"],
+    "proveedor": { "nombre": "Natural Threads", "pais": "Perú" },
+    "variantes": [
+      { "color": "Azul Marino", "talla": "M", "cantidad_inventario": 25 },
+      { "color": "Azul Marino", "talla": "L", "cantidad_inventario": 20 },
+      { "color": "Gris", "talla": "M", "cantidad_inventario": 22 }
+    ],
+    "fecha_creacion": "2023-11-20T14:00:00Z"
+  },
+  {
+    "nombre": "Vestido Floreado de Verano",
+    "descripcion": "Vestido ligero con estampado floral perfecto para el verano.",
+    "precio": 45.00,
+    "categoria": "Ropa",
+    "SKU": "CLO-DRS-FLR-SUM-S",
+    "etiquetas": ["vestido", "verano", "floral", "ropa"],
+    "proveedor": { "nombre": "Sunny Fabrics", "pais": "Brasil" },
+    "variantes": [
+      { "color": "Multicolor", "talla": "S", "cantidad_inventario": 35 },
+      { "color": "Multicolor", "talla": "M", "cantidad_inventario": 38 }
+    ],
+    "fecha_creacion": "2023-11-22T10:30:00Z"
+  },
+  {
+    "nombre": "Sandalias Cómodas para Playa",
+    "descripcion": "Sandalias resistentes al agua con soporte de arco.",
+    "precio": 28.50,
+    "categoria": "Calzado",
+    "SKU": "SHU-SND-BEA-BLK-40",
+    "etiquetas": ["sandalias", "playa", "verano", "calzado"],
+    "proveedor": { "nombre": "Beach Walkers", "pais": "Portugal" },
+    "variantes": [
+      { "color": "Negro", "talla": "40", "cantidad_inventario": 40 },
+      { "color": "Negro", "talla": "41", "cantidad_inventario": 42 },
+      { "color": "Azul", "talla": "40", "cantidad_inventario": 38 }
+    ],
+    "fecha_creacion": "2023-11-25T09:00:00Z"
+  },
+  {
+    "nombre": "Cámara Digital Compacta",
+    "descripcion": "Cámara fácil de usar ideal para viajes y fotos familiares.",
+    "precio": 180.00,
+    "categoria": "Electrónica",
+    "SKU": "ELE-CAM-CMP-BLU",
+    "etiquetas": ["camara", "digital", "compacta", "fotografia", "electronica"],
+    "proveedor": { "nombre": "Foto Express", "pais": "Taiwán" },
+    "variantes": [
+      { "color": "Azul", "cantidad_inventario": 15 },
+      { "color": "Rojo", "cantidad_inventario": 12 }
+    ],
+    "fecha_creacion": "2023-11-28T11:00:00Z"
+  },
+  {
+    "nombre": "Tablet Android 10 pulgadas",
+    "descripcion": "Tablet con pantalla grande y buen rendimiento para multimedia.",
+    "precio": 250.00,
+    "categoria": "Electrónica",
+    "SKU": "ELE-TAB-AND-10IN",
+    "etiquetas": ["tablet", "android", "tecnologia", "multimedia"],
+    "proveedor": { "nombre": "Digi World", "pais": "China" },
+    "variantes": [
+      { "capacidad": "64GB", "color": "Gris Espacial", "cantidad_inventario": 30 }
+    ],
+    "fecha_creacion": "2023-12-01T15:00:00Z"
+  },
+  {
+    "nombre": "Libro: El Principito",
+    "descripcion": "Clásico universal de Antoine de Saint-Exupéry.",
+    "precio": 8.50,
+    "categoria": "Libros",
+    "SKU": "BOK-CLC-PRIN-AST",
+    "etiquetas": ["libro", "clasico", "literatura", "infantil"],
+    "proveedor": { "nombre": "Libros del Mundo", "pais": "Francia" },
+    "variantes": [
+      { "formato": "Tapa Dura", "cantidad_inventario": 80 }
+    ],
+    "fecha_creacion": "2023-12-05T10:00:00Z"
+  },
+  {
+    "nombre": "Set de Cuchillos de Cocina Profesional",
+    "descripcion": "Juego de cuchillos de acero inoxidable de alta calidad.",
+    "precio": 95.00,
+    "categoria": "Hogar",
+    "SKU": "HOM-KIT-KNV-PRO",
+    "etiquetas": ["cuchillos", "cocina", "profesional", "hogar"],
+    "proveedor": { "nombre": "Cutlery Experts", "pais": "Japón" },
+    "variantes": [
+      { "cantidad_inventario": 25 }
+    ],
+    "fecha_creacion": "2023-12-08T13:00:00Z"
+  },
+  {
+    "nombre": "Cafetera de Goteo Programable",
+    "descripcion": "Cafetera con temporizador para tener café listo por la mañana.",
+    "precio": 60.00,
+    "categoria": "Hogar",
+    "SKU": "HOM-APL-COF-PRG",
+    "etiquetas": ["cafetera", "cafe", "goteo", "programable", "hogar"],
+    "proveedor": { "nombre": "Morning Brew Co.", "pais": "Italia" },
+    "variantes": [
+      { "color": "Negro", "cantidad_inventario": 30 },
+      { "color": "Plata", "cantidad_inventario": 28 }
+    ],
+    "fecha_creacion": "2023-12-10T09:00:00Z"
+  },
+  {
+    "nombre": "Cartera de Cuero Genuino",
+    "descripcion": "Cartera elegante y duradera hecha de cuero auténtico.",
+    "precio": 40.00,
+    "categoria": "Accesorios",
+    "SKU": "ACC-WLT-LEA-GEN",
+    "etiquetas": ["cartera", "cuero", "accesorio", "moda"],
+    "proveedor": { "nombre": "Leather Crafts", "pais": "Argentina" },
+    "variantes": [
+      { "color": "Marrón", "cantidad_inventario": 35 },
+      { "color": "Negro", "cantidad_inventario": 33 }
+    ],
+    "fecha_creacion": "2023-12-15T16:00:00Z"
+  },
+  {
+    "nombre": "Set de Pinceles para Pintura Artística",
+    "descripcion": "Variedad de pinceles para diferentes técnicas de pintura.",
+    "precio": 22.50,
+    "categoria": "Arte y Manualidades",
+    "SKU": "ART-SUP-BRU-SET",
+    "etiquetas": ["pinceles", "arte", "pintura", "manualidades", "set"],
+    "proveedor": { "nombre": "Art Supplies Co.", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 50 }
+    ],
+    "fecha_creacion": "2023-12-18T10:00:00Z"
+  },
+  {
+    "nombre": "Teclado Mecánico Gamer",
+    "descripcion": "Teclado de alto rendimiento para juegos con retroiluminación RGB.",
+    "precio": 99.99,
+    "categoria": "Electrónica",
+    "SKU": "ELE-PER-KYB-GAM",
+    "etiquetas": ["teclado", "mecanico", "gamer", "rgb", "electronica"],
+    "proveedor": { "nombre": "Gaming Gear Inc.", "pais": "China" },
+    "variantes": [
+      { "layout": "Español", "cantidad_inventario": 20 },
+      { "layout": "Inglés", "cantidad_inventario": 18 }
+    ],
+    "fecha_creacion": "2024-01-05T14:00:00Z"
+  },
+  {
+    "nombre": "Ratón Inalámbrico Ergonómico",
+    "descripcion": "Ratón cómodo para largas horas de uso, conexión inalámbrica.",
+    "precio": 30.00,
+    "categoria": "Electrónica",
+    "SKU": "ELE-PER-MSE-WRL",
+    "etiquetas": ["raton", "inalambrico", "ergonomico", "periferico", "electronica"],
+    "proveedor": { "nombre": "Office Comfort", "pais": "China" },
+    "variantes": [
+      { "color": "Negro", "cantidad_inventario": 40 }
+    ],
+    "fecha_creacion": "2024-01-07T10:30:00Z"
+  },
+  {
+    "nombre": "Monitor LED 27 pulgadas Full HD",
+    "descripcion": "Pantalla grande con resolución Full HD para trabajo y entretenimiento.",
+    "precio": 180.00,
+    "categoria": "Electrónica",
+    "SKU": "ELE-DSK-MNR-27FHD",
+    "etiquetas": ["monitor", "pantalla", "full hd", "electronica"],
+    "proveedor": { "nombre": "Visual Tech", "pais": "Vietnam" },
+    "variantes": [
+      { "cantidad_inventario": 25 }
+    ],
+    "fecha_creacion": "2024-01-10T11:00:00Z"
+  },
+  {
+    "nombre": "Router Wi-Fi Dual Band",
+    "descripcion": "Mejora la velocidad y cobertura de tu red Wi-Fi.",
+    "precio": 55.50,
+    "categoria": "Electrónica",
+    "SKU": "ELE-NET-RTR-DBND",
+    "etiquetas": ["router", "wifi", "red", "internet", "electronica"],
+    "proveedor": { "nombre": "Connect Everywhere", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 30 }
+    ],
+    "fecha_creacion": "2024-01-12T15:00:00Z"
+  },
+  {
+    "nombre": "Impresora Multifuncional de Inyección de Tinta",
+    "descripcion": "Imprime, escanea y copia. Ideal para hogar y oficina pequeña.",
+    "precio": 70.00,
+    "categoria": "Electrónica",
+    "SKU": "ELE-OFC-PRN-INK",
+    "etiquetas": ["impresora", "multifuncional", "escaner", "copiadora", "electronica"],
+    "proveedor": { "nombre": "Print Solutions", "pais": "Vietnam" },
+    "variantes": [
+      { "cantidad_inventario": 18 }
+    ],
+    "fecha_creacion": "2024-01-15T09:30:00Z"
+  },
+  {
+    "nombre": "Teléfono Inteligente Modelo Y",
+    "descripcion": "Smartphone con cámara avanzada y larga duración de batería.",
+    "precio": 350.00,
+    "categoria": "Electrónica",
+    "SKU": "ELE-MOB-MODY",
+    "etiquetas": ["smartphone", "movil", "celular", "tecnologia", "android"],
+    "proveedor": { "nombre": "Mobile Innovations", "pais": "Corea del Sur" },
+    "variantes": [
+      { "color": "Negro", "capacidad": "128GB", "cantidad_inventario": 30 },
+      { "color": "Azul", "capacidad": "128GB", "cantidad_inventario": 25 }
+    ],
+    "fecha_creacion": "2024-01-20T14:00:00Z"
+  },
+  {
+    "nombre": "Altavoz Bluetooth Portátil",
+    "descripcion": "Altavoz compacto con buen sonido, ideal para exteriores.",
+    "precio": 40.00,
+    "categoria": "Electrónica",
+    "SKU": "ELE-AUD-SPK-PRT",
+    "etiquetas": ["altavoz", "bluetooth", "portatil", "audio", "electronica"],
+    "proveedor": { "nombre": "Sound Wanderer", "pais": "China" },
+    "variantes": [
+      { "color": "Negro", "cantidad_inventario": 50 },
+      { "color": "Rojo", "cantidad_inventario": 45 }
+    ],
+    "fecha_creacion": "2024-01-22T16:00:00Z"
+  },
+  {
+    "nombre": "Funda Protectora para Laptop 15\"",
+    "descripcion": "Funda acolchada para proteger tu portátil de golpes.",
+    "precio": 20.00,
+    "categoria": "Accesorios",
+    "SKU": "ACC-LAP-CAS-15IN",
+    "etiquetas": ["funda", "laptop", "protector", "accesorio"],
+    "proveedor": { "nombre": "Protect Tech", "pais": "China" },
+    "variantes": [
+      { "color": "Gris", "cantidad_inventario": 60 }
+    ],
+    "fecha_creacion": "2024-01-25T09:00:00Z"
+  },
+    {
+    "nombre": "Mesa de Centro Moderna",
+    "descripcion": "Mesa de centro con diseño minimalista para sala.",
+    "precio": 150.00,
+    "categoria": "Muebles",
+    "SKU": "FUR-TBL-COF-MOD",
+    "etiquetas": ["mesa", "centro", "mueble", "sala", "moderno"],
+    "proveedor": { "nombre": "Home Furnishings", "pais": "Italia" },
+    "variantes": [
+      { "material": "Madera y Metal", "cantidad_inventario": 10 }
+    ],
+    "fecha_creacion": "2024-02-01T10:00:00Z"
+  },
+  {
+    "nombre": "Silla de Oficina Ergonómica",
+    "descripcion": "Silla ajustable para mayor comodidad durante el trabajo.",
+    "precio": 200.00,
+    "categoria": "Muebles",
+    "SKU": "FUR-CHR-OFC-ERG",
+    "etiquetas": ["silla", "oficina", "ergonomica", "mueble", "trabajo"],
+    "proveedor": { "nombre": "Comfort Seating", "pais": "Estados Unidos" },
+    "variantes": [
+      { "color": "Negro", "cantidad_inventario": 15 },
+      { "color": "Gris", "cantidad_inventario": 12 }
+    ],
+    "fecha_creacion": "2024-02-05T11:30:00Z"
+  },
+  {
+    "nombre": "Estantería Modular de Pared",
+    "descripcion": "Estantería adaptable para libros u objetos decorativos.",
+    "precio": 80.00,
+    "categoria": "Muebles",
+    "SKU": "FUR-SHL-WLL-MOD",
+    "etiquetas": ["estanteria", "modular", "pared", "mueble", "decoracion"],
+    "proveedor": { "nombre": "Space Savers", "pais": "Suecia" },
+    "variantes": [
+      { "color": "Blanco", "cantidad_inventario": 20 },
+      { "color": "Madera Clara", "cantidad_inventario": 18 }
+    ],
+    "fecha_creacion": "2024-02-08T09:00:00Z"
+  },
+  {
+    "nombre": "Colchón Ortopédico Queen Size",
+    "descripcion": "Colchón que brinda soporte y confort para un buen descanso.",
+    "precio": 450.00,
+    "categoria": "Dormitorio",
+    "SKU": "BED-MTR-ORT-QUEEN",
+    "etiquetas": ["colchon", "ortopedico", "queen size", "dormitorio", "descanso"],
+    "proveedor": { "nombre": "Sleep Well Inc.", "pais": "Canadá" },
+    "variantes": [
+      { "tamaño": "Queen", "cantidad_inventario": 8 }
+    ],
+    "fecha_creacion": "2024-02-10T14:00:00Z"
+  },
+  {
+    "nombre": "Juego de Sábanas de Algodón Egipcio",
+    "descripcion": "Sábanas de lujo con alto conteo de hilos para máxima suavidad.",
+    "precio": 70.00,
+    "categoria": "Dormitorio",
+    "SKU": "BED-SHE-EGY-QUEEN",
+    "etiquetas": ["sabanas", "algodon egipcio", "lujo", "dormitorio"],
+    "proveedor": { "nombre": "Luxury Linens", "pais": "Egipto" },
+    "variantes": [
+      { "tamaño": "Queen", "color": "Blanco", "cantidad_inventario": 25 },
+      { "tamaño": "Queen", "color": "Gris Claro", "cantidad_inventario": 22 }
+    ],
+    "fecha_creacion": "2024-02-12T10:00:00Z"
+  },
+  {
+    "nombre": "Toallas de Baño de Bambú",
+    "descripcion": "Toallas ultra suaves y absorbentes hechas de bambú.",
+    "precio": 35.00,
+    "categoria": "Baño",
+    "SKU": "BTH-TOW-BAM-SET",
+    "etiquetas": ["toallas", "bambu", "baño", "suave"],
+    "proveedor": { "nombre": "Eco Bath", "pais": "China" },
+    "variantes": [
+      { "color": "Verde Menta", "cantidad_inventario": 30 },
+      { "color": "Azul Cielo", "cantidad_inventario": 28 }
+    ],
+    "fecha_creacion": "2024-02-15T09:00:00Z"
+  },
+  {
+    "nombre": "Dispensador de Jabón Automático",
+    "descripcion": "Dispensador sin contacto para una higiene mejorada.",
+    "precio": 20.00,
+    "categoria": "Baño",
+    "SKU": "BTH-ACC-DSP-AUTO",
+    "etiquetas": ["dispensador", "jabon", "automatico", "baño", "higiene"],
+    "proveedor": { "nombre": "Clean Hands Co.", "pais": "China" },
+    "variantes": [
+      { "color": "Blanco", "cantidad_inventario": 40 }
+    ],
+    "fecha_creacion": "2024-02-18T11:00:00Z"
+  },
+  {
+    "nombre": "Organizador de Cajones Expandible",
+    "descripcion": "Mantén tus cajones ordenados con este organizador adaptable.",
+    "precio": 15.00,
+    "categoria": "Hogar",
+    "SKU": "HOM-ORG-DRW-EXP",
+    "etiquetas": ["organizador", "cajones", "hogar", "orden"],
+    "proveedor": { "nombre": "Orderly Living", "pais": "Vietnam" },
+    "variantes": [
+      { "cantidad_inventario": 50 }
+    ],
+    "fecha_creacion": "2024-02-20T13:00:00Z"
+  },
+  {
+    "nombre": "Set de Contenedores de Alimentos Herméticos",
+    "descripcion": "Para mantener tus alimentos frescos por más tiempo.",
+    "precio": 30.00,
+    "categoria": "Cocina",
+    "SKU": "KIT-CTR-FOD-HRM",
+    "etiquetas": ["contenedores", "alimentos", "cocina", "hermetico"],
+    "proveedor": { "nombre": "Fresh Keepers", "pais": "China" },
+    "variantes": [
+      { "tamaño": "Set de 5", "cantidad_inventario": 45 }
+    ],
+    "fecha_creacion": "2024-02-22T09:00:00Z"
+  },
+  {
+    "nombre": "Máquina para Pasta Manual",
+    "descripcion": "Haz tu propia pasta fresca en casa fácilmente.",
+    "precio": 40.00,
+    "categoria": "Cocina",
+    "SKU": "KIT-APP-PST-MAN",
+    "etiquetas": ["maquina", "pasta", "cocina", "manual"],
+    "proveedor": { "nombre": "Italian Kitchen", "pais": "Italia" },
+    "variantes": [
+      { "cantidad_inventario": 20 }
+    ],
+    "fecha_creacion": "2024-02-25T10:30:00Z"
+  },
+  {
+    "nombre": "Batidora de Mano Sumergible",
+    "descripcion": "Ideal para sopas, cremas y smoothies directamente en el recipiente.",
+    "precio": 28.00,
+    "categoria": "Cocina",
+    "SKU": "KIT-APP-BLN-SBM",
+    "etiquetas": ["batidora", "sumergible", "cocina", "electrodomestico"],
+    "proveedor": { "nombre": "Blend Masters", "pais": "China" },
+    "variantes": [
+      { "color": "Negro", "cantidad_inventario": 35 }
+    ],
+    "fecha_creacion": "2024-02-28T14:00:00Z"
+  },
+    {
+    "nombre": "Kit de Pintura por Números para Adultos",
+    "descripcion": "Actividad relajante y creativa para hacer en casa.",
+    "precio": 25.00,
+    "categoria": "Arte y Manualidades",
+    "SKU": "ART-KIT-PNT-NUM",
+    "etiquetas": ["pintura", "numeros", "arte", "manualidades", "hobby"],
+    "proveedor": { "nombre": "Creative Hobbies", "pais": "China" },
+    "variantes": [
+      { "diseño": "Paisaje Urbano", "cantidad_inventario": 30 }
+    ],
+    "fecha_creacion": "2024-03-01T10:00:00Z"
+  },
+  {
+    "nombre": "Set de Arcilla Polimérica con Herramientas",
+    "descripcion": "Ideal para modelar figuras y crear joyería.",
+    "precio": 20.00,
+    "categoria": "Arte y Manualidades",
+    "SKU": "ART-SUP-CLY-POL",
+    "etiquetas": ["arcilla", "polimerica", "modelado", "manualidades", "joyeria"],
+    "proveedor": { "nombre": "Sculpt Art", "pais": "China" },
+    "variantes": [
+      { "color": "Surtido Básico", "cantidad_inventario": 40 }
+    ],
+    "fecha_creacion": "2024-03-05T11:30:00Z"
+  },
+  {
+    "nombre": "Cuaderno de Bocetos Profesional A4",
+    "descripcion": "Papel de alta calidad para artistas, tamaño A4.",
+    "precio": 10.00,
+    "categoria": "Arte y Manualidades",
+    "SKU": "ART-SUP-SKB-A4P",
+    "etiquetas": ["cuaderno", "bocetos", "arte", "dibujo", "papel"],
+    "proveedor": { "nombre": "Artistic Paper Co.", "pais": "Alemania" },
+    "variantes": [
+      { "paginas": 100, "cantidad_inventario": 60 }
+    ],
+    "fecha_creacion": "2024-03-08T09:00:00Z"
+  },
+  {
+    "nombre": "Set de Marcadores Acuarelables",
+    "descripcion": "Marcadores con efecto acuarela para ilustraciones.",
+    "precio": 35.00,
+    "categoria": "Arte y Manualidades",
+    "SKU": "ART-SUP-MRK-WCL",
+    "etiquetas": ["marcadores", "acuarelable", "arte", "ilustracion"],
+    "proveedor": { "nombre": "Color Dreams", "pais": "Corea del Sur" },
+    "variantes": [
+      { "colores": "Set de 24", "cantidad_inventario": 30 }
+    ],
+    "fecha_creacion": "2024-03-10T14:00:00Z"
+  },
+  {
+    "nombre": "Bastidor de Madera para Lienzo",
+    "descripcion": "Bastidor resistente para tus proyectos de pintura.",
+    "precio": 8.00,
+    "categoria": "Arte y Manualidades",
+    "SKU": "ART-SUP-FRM-CAN",
+    "etiquetas": ["bastidor", "lienzo", "pintura", "arte"],
+    "proveedor": { "nombre": "Canvas Creations", "pais": "China" },
+    "variantes": [
+      { "tamaño": "50x70 cm", "cantidad_inventario": 40 }
+    ],
+    "fecha_creacion": "2024-03-12T10:00:00Z"
+  },
+  {
+    "nombre": "Kit de Costura Básico",
+    "descripcion": "Lo esencial para pequeñas reparaciones de costura.",
+    "precio": 12.00,
+    "categoria": "Arte y Manualidades",
+    "SKU": "ART-KIT-SWG-BAS",
+    "etiquetas": ["costura", "kit", "reparacion", "manualidades"],
+    "proveedor": { "nombre": "Sewing Solutions", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 50 }
+    ],
+    "fecha_creacion": "2024-03-15T09:00:00Z"
+  },
+  {
+    "nombre": "Pegamento Multiusos de Secado Rápido",
+    "descripcion": "Adhesivo fuerte para diversos materiales.",
+    "precio": 5.00,
+    "categoria": "Arte y Manualidades",
+    "SKU": "ART-SUP-GLU-MLT",
+    "etiquetas": ["pegamento", "adhesivo", "manualidades"],
+    "proveedor": { "nombre": "Sticky Stuff Co.", "pais": "China" },
+    "variantes": [
+      { "formato": "Tubo 50ml", "cantidad_inventario": 70 }
+    ],
+    "fecha_creacion": "2024-03-18T11:00:00Z"
+  },
+  {
+    "nombre": "Cinta Métrica Retráctil",
+    "descripcion": "Herramienta esencial para medir en proyectos de manualidades.",
+    "precio": 7.00,
+    "categoria": "Arte y Manualidades",
+    "SKU": "ART-SUP-MSE-TPM",
+    "etiquetas": ["cinta metrica", "medir", "manualidades", "herramienta"],
+    "proveedor": { "nombre": "Measure It Right", "pais": "China" },
+    "variantes": [
+      { "longitud": "3 metros", "cantidad_inventario": 65 }
+    ],
+    "fecha_creacion": "2024-03-20T13:00:00Z"
+  },
+    {
+    "nombre": "Balón de Fútbol Talla 5",
+    "descripcion": "Balón resistente para partidos y entrenamiento.",
+    "precio": 25.00,
+    "categoria": "Deportes",
+    "SKU": "SPT-FBL-BAL-5",
+    "etiquetas": ["futbol", "balon", "deporte", "entrenamiento"],
+    "proveedor": { "nombre": "Sporting Goods Inc.", "pais": "Pakistán" },
+    "variantes": [
+      { "cantidad_inventario": 30 }
+    ],
+    "fecha_creacion": "2024-03-22T10:00:00Z"
+  },
+  {
+    "nombre": "Set de Mancuernas Ajustables",
+    "descripcion": "Ideal para entrenar fuerza en casa.",
+    "precio": 80.00,
+    "categoria": "Deportes",
+    "SKU": "SPT-FIT-DMB-ADJ",
+    "etiquetas": ["mancuernas", "pesas", "fitness", "gimnasio", "deporte"],
+    "proveedor": { "nombre": "Fitness Home", "pais": "China" },
+    "variantes": [
+      { "peso_max_kg": 20, "cantidad_inventario": 15 }
+    ],
+    "fecha_creacion": "2024-03-25T11:30:00Z"
+  },
+  {
+    "nombre": "Colchoneta de Yoga Antideslizante",
+    "descripcion": "Proporciona agarre y confort para tu práctica de yoga.",
+    "precio": 20.00,
+    "categoria": "Deportes",
+    "SKU": "SPT-YGA-MAT-ANT",
+    "etiquetas": ["yoga", "colchoneta", "mat", "fitness", "deporte"],
+    "proveedor": { "nombre": "Yoga Flow", "pais": "India" },
+    "variantes": [
+      { "color": "Morado", "cantidad_inventario": 40 },
+      { "color": "Azul", "cantidad_inventario": 38 }
+    ],
+    "fecha_creacion": "2024-03-28T09:00:00Z"
+  },
+  {
+    "nombre": "Cuerda para Saltar de Velocidad",
+    "descripcion": "Ideal para cardio y entrenamiento de boxeo.",
+    "precio": 10.00,
+    "categoria": "Deportes",
+    "SKU": "SPT-FIT-JPR-SPD",
+    "etiquetas": ["cuerda", "saltar", "cardio", "fitness", "deporte"],
+    "proveedor": { "nombre": "Cardio Pro", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 50 }
+    ],
+    "fecha_creacion": "2024-03-30T14:00:00Z"
+  },
+  {
+    "nombre": "Gafas de Natación Antivaho",
+    "descripcion": "Visión clara bajo el agua.",
+    "precio": 15.00,
+    "categoria": "Deportes",
+    "SKU": "SPT-SWI-GOG-ANT",
+    "etiquetas": ["natacion", "gafas", "deporte", "piscina"],
+    "proveedor": { "nombre": "Swim Gear", "pais": "China" },
+    "variantes": [
+      { "color": "Transparente", "cantidad_inventario": 35 }
+    ],
+    "fecha_creacion": "2024-04-01T10:00:00Z"
+  },
+  {
+    "nombre": "Kit de Bandas de Resistencia",
+    "descripcion": "Varias resistencias para diferentes ejercicios.",
+    "precio": 20.00,
+    "categoria": "Deportes",
+    "SKU": "SPT-FIT-BND-RES",
+    "etiquetas": ["bandas", "resistencia", "fitness", "ejercicio", "deporte"],
+    "proveedor": { "nombre": "Strength Training Co.", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 40 }
+    ],
+    "fecha_creacion": "2024-04-05T09:00:00Z"
+  },
+    {
+    "nombre": "Set de Bloques de Construcción Grandes",
+    "descripcion": "Bloques coloridos y seguros para niños pequeños.",
+    "precio": 30.00,
+    "categoria": "Juguetes",
+    "SKU": "TOY-BLD-BLK-LRG",
+    "etiquetas": ["bloques", "construccion", "juguete", "infantil"],
+    "proveedor": { "nombre": "Kids Fun", "pais": "China" },
+    "variantes": [
+      { "piezas": 50, "cantidad_inventario": 40 }
+    ],
+    "fecha_creacion": "2024-04-08T10:00:00Z"
+  },
+  {
+    "nombre": "Muñeca Interactiva con Sonidos",
+    "descripcion": "Muñeca que ríe y dice frases.",
+    "precio": 45.00,
+    "categoria": "Juguetes",
+    "SKU": "TOY-DOL-INT-SND",
+    "etiquetas": ["muñeca", "interactiva", "juguete", "niños"],
+    "proveedor": { "nombre": "Playtime Toys", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 35 }
+    ],
+    "fecha_creacion": "2024-04-10T11:30:00Z"
+  },
+  {
+    "nombre": "Coche de Juguete a Control Remoto",
+    "descripcion": "Coche rápido y fácil de controlar.",
+    "precio": 25.00,
+    "categoria": "Juguetes",
+    "SKU": "TOY-CAR-RMC",
+    "etiquetas": ["coche", "control remoto", "juguete", "radiocontrol"],
+    "proveedor": { "nombre": "Speedy Toys", "pais": "China" },
+    "variantes": [
+      { "color": "Rojo", "cantidad_inventario": 30 },
+      { "color": "Azul", "cantidad_inventario": 28 }
+    ],
+    "fecha_creacion": "2024-04-12T09:00:00Z"
+  },
+  {
+    "nombre": "Puzzle de 1000 Piezas - Paisaje",
+    "descripcion": "Puzzle desafiante con una hermosa imagen de paisaje.",
+    "precio": 18.00,
+    "categoria": "Juguetes",
+    "SKU": "TOY-PZL-1000-LND",
+    "etiquetas": ["puzzle", "rompecabezas", "juguete", "paisaje"],
+    "proveedor": { "nombre": "Mind Games", "pais": "Polonia" },
+    "variantes": [
+      { "cantidad_inventario": 25 }
+    ],
+    "fecha_creacion": "2024-04-15T14:00:00Z"
+  },
+  {
+    "nombre": "Set de Dibujo y Colorear",
+    "descripcion": "Incluye lápices, ceras y rotuladores para pequeños artistas.",
+    "precio": 22.00,
+    "categoria": "Juguetes",
+    "SKU": "TOY-ART-DRW-CLR",
+    "etiquetas": ["dibujo", "colorear", "set", "juguete", "artistico"],
+    "proveedor": { "nombre": "Color Kids", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 40 }
+    ],
+    "fecha_creacion": "2024-04-18T10:00:00Z"
+  },
+  {
+    "nombre": "Juego de Mesa Estratégico",
+    "descripcion": "Juego para toda la familia, fomenta el pensamiento estratégico.",
+    "precio": 35.00,
+    "categoria": "Juguetes",
+    "SKU": "TOY-BGD-STR-FAM",
+    "etiquetas": ["juego de mesa", "estrategia", "familia", "juguete"],
+    "proveedor": { "nombre": "Board Games World", "pais": "Alemania" },
+    "variantes": [
+      { "jugadores": "2-4", "cantidad_inventario": 30 }
+    ],
+    "fecha_creacion": "2024-04-20T15:00:00Z"
+  },
+    {
+    "nombre": "Comida para Perro Adulto - Sabor Pollo",
+    "descripcion": "Alimento seco balanceado para perros adultos.",
+    "precio": 30.00,
+    "categoria": "Mascotas",
+    "SKU": "PET-FOD-DOG-ADL-CHK",
+    "etiquetas": ["comida perro", "mascota", "alimento seco", "perro adulto"],
+    "proveedor": { "nombre": "Healthy Pets", "pais": "Brasil" },
+    "variantes": [
+      { "peso_kg": 10, "cantidad_inventario": 50 }
+    ],
+    "fecha_creacion": "2024-04-22T10:00:00Z"
+  },
+  {
+    "nombre": "Juguete para Gato - Ratón con Catnip",
+    "descripcion": "Divertido ratón relleno de catnip para estimular a tu gato.",
+    "precio": 5.00,
+    "categoria": "Mascotas",
+    "SKU": "PET-TOY-CAT-MCE-CTP",
+    "etiquetas": ["juguete gato", "catnip", "mascota"],
+    "proveedor": { "nombre": "Feline Fun", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 100 }
+    ],
+    "fecha_creacion": "2024-04-25T11:00:00Z"
+  },
+  {
+    "nombre": "Arena para Gato Aglutinante",
+    "descripcion": "Arena sanitaria que forma grumos para facilitar la limpieza.",
+    "precio": 15.00,
+    "categoria": "Mascotas",
+    "SKU": "PET-SND-CAT-CLP",
+    "etiquetas": ["arena gato", "mascota", "arena sanitaria"],
+    "proveedor": { "nombre": "Clean Paws", "pais": "México" },
+    "variantes": [
+      { "peso_kg": 5, "cantidad_inventario": 60 }
+    ],
+    "fecha_creacion": "2024-04-28T09:30:00Z"
+  },
+  {
+    "nombre": "Correa Retráctil para Perro Mediano",
+    "descripcion": "Permite a tu perro explorar con seguridad.",
+    "precio": 20.00,
+    "categoria": "Mascotas",
+    "SKU": "PET-ACC-LEA-RET-MED",
+    "etiquetas": ["correa perro", "mascota", "paseo", "retractil"],
+    "proveedor": { "nombre": "Doggy Gear", "pais": "China" },
+    "variantes": [
+      { "longitud_m": 5, "cantidad_inventario": 40 }
+    ],
+    "fecha_creacion": "2024-05-01T10:00:00Z"
+  },
+  {
+    "nombre": "Cama para Gato Suave y Redonda",
+    "descripcion": "Cama acogedora para que tu gato descanse.",
+    "precio": 30.00,
+    "categoria": "Mascotas",
+    "SKU": "PET-FUR-CAT-BED-RND",
+    "etiquetas": ["cama gato", "mascota", "descanso"],
+    "proveedor": { "nombre": "Cozy Pets", "pais": "China" },
+    "variantes": [
+      { "color": "Gris", "cantidad_inventario": 35 }
+    ],
+    "fecha_creacion": "2024-05-05T14:00:00Z"
+  },
+  {
+    "nombre": "Champú para Perros con Piel Sensible",
+    "descripcion": "Fórmula suave para cuidar la piel de tu perro.",
+    "precio": 12.00,
+    "categoria": "Mascotas",
+    "SKU": "PET-HYG-SHP-DOG-SNS",
+    "etiquetas": ["champu perro", "mascota", "higiene", "piel sensible"],
+    "proveedor": { "nombre": "Pet Wellness", "pais": "Francia" },
+    "variantes": [
+      { "volumen_ml": 500, "cantidad_inventario": 50 }
+    ],
+    "fecha_creacion": "2024-05-08T09:00:00Z"
+  },
+    {
+    "nombre": "Termo de Acero Inoxidable 500ml",
+    "descripcion": "Mantiene bebidas calientes o frías por horas.",
+    "precio": 18.00,
+    "categoria": "Accesorios",
+    "SKU": "ACC-DRK-TRM-500",
+    "etiquetas": ["termo", "acero inoxidable", "bebida", "portatil", "accesorio"],
+    "proveedor": { "nombre": "Drink Fresh", "pais": "China" },
+    "variantes": [
+      { "color": "Plata", "cantidad_inventario": 60 },
+      { "color": "Negro", "cantidad_inventario": 55 }
+    ],
+    "fecha_creacion": "2024-05-10T10:00:00Z"
+  },
+  {
+    "nombre": " Paraguas Plegable Compacto",
+    "descripcion": "Fácil de llevar, te protege de la lluvia.",
+    "precio": 15.00,
+    "categoria": "Accesorios",
+    "SKU": "ACC-CLT-UMB-CMP",
+    "etiquetas": ["paraguas", "lluvia", "accesorio", "plegable"],
+    "proveedor": { "nombre": "Rain Guard", "pais": "China" },
+    "variantes": [
+      { "color": "Azul Marino", "cantidad_inventario": 50 },
+      { "color": "Negro", "cantidad_inventario": 48 }
+    ],
+    "fecha_creacion": "2024-05-12T11:00:00Z"
+  },
+  {
+    "nombre": "Gafas de Sol Polarizadas",
+    "descripcion": "Protección UV y reducción de brillo para tus ojos.",
+    "precio": 25.00,
+    "categoria": "Accesorios",
+    "SKU": "ACC-EYE-SUN-PLR",
+    "etiquetas": ["gafas de sol", "polarizadas", "proteccion uv", "accesorio"],
+    "proveedor": { "nombre": "Sun Optics", "pais": "Italia" },
+    "variantes": [
+      { "color_lente": "Gris", "color_montura": "Negro", "cantidad_inventario": 30 }
+    ],
+    "fecha_creacion": "2024-05-15T14:00:00Z"
+  },
+  {
+    "nombre": "Bolsa Reutilizable de Tela",
+    "descripcion": "Ecológica y resistente para tus compras.",
+    "precio": 3.00,
+    "categoria": "Accesorios",
+    "SKU": "ACC-BAG-REU-CLT",
+    "etiquetas": ["bolsa", "reutilizable", "ecologica", "compra", "accesorio"],
+    "proveedor": { "nombre": "Eco Friendly Bags", "pais": "India" },
+    "variantes": [
+      { "cantidad_inventario": 200 }
+    ],
+    "fecha_creacion": "2024-05-18T09:00:00Z"
+  },
+  {
+    "nombre": "Funda para Teléfono con Soporte",
+    "descripcion": "Protege tu smartphone y úsalo cómodamente con el soporte integrado.",
+    "precio": 10.00,
+    "categoria": "Accesorios",
+    "SKU": "ACC-PHN-CAS-STN-IP14",
+    "etiquetas": ["funda telefono", "soporte", "accesorio", "smartphone"],
+    "proveedor": { "nombre": "Phone Guard", "pais": "China" },
+    "variantes": [
+      { "modelo_telefono": "iPhone 14", "color": "Negro", "cantidad_inventario": 50 },
+      { "modelo_telefono": "Samsung S23", "color": "Negro", "cantidad_inventario": 45 }
+    ],
+    "fecha_creacion": "2024-05-20T10:30:00Z"
+  },
+  {
+    "nombre": "PopSocket para Teléfono",
+    "descripcion": "Mejora el agarre y sirve como soporte para tu smartphone.",
+    "precio": 8.00,
+    "categoria": "Accesorios",
+    "SKU": "ACC-PHN-POP",
+    "etiquetas": ["popsocket", "telefono", "accesorio", "smartphone"],
+    "proveedor": { "nombre": "Grip Tech", "pais": "China" },
+    "variantes": [
+      { "diseño": "Mármol", "cantidad_inventario": 70 },
+      { "diseño": "Unicornio", "cantidad_inventario": 65 }
+    ],
+    "fecha_creacion": "2024-05-22T11:00:00Z"
+  },
+    {
+    "nombre": "Set de Pesa Rusa (Kettlebell) 10kg",
+    "descripcion": "Ideal para entrenamiento funcional.",
+    "precio": 40.00,
+    "categoria": "Deportes",
+    "SKU": "SPT-FIT-KTL-10KG",
+    "etiquetas": ["pesa rusa", "kettlebell", "fitness", "entrenamiento funcional", "deporte"],
+    "proveedor": { "nombre": "Strength Builders", "pais": "China" },
+    "variantes": [
+      { "peso_kg": 10, "cantidad_inventario": 15 }
+    ],
+    "fecha_creacion": "2024-05-25T14:00:00Z"
+  },
+  {
+    "nombre": "Rodillo de Espuma para Masaje",
+    "descripcion": "Ayuda a relajar los músculos después del ejercicio.",
+    "precio": 20.00,
+    "categoria": "Deportes",
+    "SKU": "SPT-REC-RLL-FOAM",
+    "etiquetas": ["rodillo", "espuma", "masaje", "recuperacion", "fitness"],
+    "proveedor": { "nombre": "Recovery Zone", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 30 }
+    ],
+    "fecha_creacion": "2024-05-28T09:00:00Z"
+  },
+  {
+    "nombre": "Banda Elástica de Resistencia Fuerte",
+    "descripcion": "Para ejercicios de fuerza y rehabilitación.",
+    "precio": 8.00,
+    "categoria": "Deportes",
+    "SKU": "SPT-FIT-BND-STR",
+    "etiquetas": ["banda resistencia", "fuerte", "ejercicio", "fitness", "rehabilitacion"],
+    "proveedor": { "nombre": "Resistance Pro", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 45 }
+    ],
+    "fecha_creacion": "2024-05-30T10:00:00Z"
+  },
+  {
+    "nombre": "Guantes de Entrenamiento con Muñequera",
+    "descripcion": "Protege tus manos y muñecas durante el levantamiento de pesas.",
+    "precio": 15.00,
+    "categoria": "Deportes",
+    "SKU": "SPT-FIT-GLV-WRP",
+    "etiquetas": ["guantes", "entrenamiento", "pesas", "fitness", "deporte"],
+    "proveedor": { "nombre": "Gym Gear Co.", "pais": "Pakistán" },
+    "variantes": [
+      { "talla": "M", "cantidad_inventario": 25 },
+      { "talla": "L", "cantidad_inventario": 22 }
+    ],
+    "fecha_creacion": "2024-06-01T11:30:00Z"
+  },
+  {
+    "nombre": "Botella de Agua Deportiva 1L",
+    "descripcion": "Hidratación esencial para tu rutina deportiva.",
+    "precio": 12.00,
+    "categoria": "Deportes",
+    "SKU": "SPT-ACC-BTL-1L",
+    "etiquetas": ["botella agua", "deporte", "hidratacion", "fitness"],
+    "proveedor": { "nombre": "Hydrate Now", "pais": "China" },
+    "variantes": [
+      { "color": "Azul", "cantidad_inventario": 50 },
+      { "color": "Gris", "cantidad_inventario": 48 }
+    ],
+    "fecha_creacion": "2024-06-05T09:00:00Z"
+  },
+    {
+    "nombre": "Set de Jardinería para Niños",
+    "descripcion": "Herramientas seguras y coloridas para pequeños jardineros.",
+    "precio": 20.00,
+    "categoria": "Juguetes",
+    "SKU": "TOY-OUT-GRD-KID",
+    "etiquetas": ["jardineria", "niños", "juguete", "exterior"],
+    "proveedor": { "nombre": "Outdoor Fun Toys", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 30 }
+    ],
+    "fecha_creacion": "2024-06-08T10:00:00Z"
+  },
+  {
+    "nombre": "Cometa de Dragón Grande",
+    "descripcion": "Ideal para un día ventoso en el parque o la playa.",
+    "precio": 15.00,
+    "categoria": "Juguetes",
+    "SKU": "TOY-OUT-KTE-DRG",
+    "etiquetas": ["cometa", "juguete", "exterior", "viento"],
+    "proveedor": { "nombre": "Wind Riders", "pais": "China" },
+    "variantes": [
+      { "color": "Rojo y Verde", "cantidad_inventario": 40 }
+    ],
+    "fecha_creacion": "2024-06-10T11:00:00Z"
+  },
+  {
+    "nombre": "Set de Pintura Facial Infantil",
+    "descripcion": "Pinturas no tóxicas para divertirse en fiestas.",
+    "precio": 10.00,
+    "categoria": "Juguetes",
+    "SKU": "TOY-ART-FCP-KID",
+    "etiquetas": ["pintura facial", "maquillaje", "juguete", "fiesta", "infantil"],
+    "proveedor": { "nombre": "Party Fun Supplies", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 50 }
+    ],
+    "fecha_creacion": "2024-06-12T09:00:00Z"
+  },
+    {
+    "nombre": "Alimento Húmedo para Gato Adulto - Salmón",
+    "descripcion": "Comida húmeda y sabrosa para gatos.",
+    "precio": 1.50,
+    "categoria": "Mascotas",
+    "SKU": "PET-FOD-CAT-WET-SLM",
+    "etiquetas": ["comida gato", "mascota", "alimento humedo", "salmon"],
+    "proveedor": { "nombre": "Feline Delights", "pais": "Tailandia" },
+    "variantes": [
+      { "formato": "Sobre 85g", "cantidad_inventario": 300 }
+    ],
+    "fecha_creacion": "2024-06-15T10:00:00Z"
+  },
+  {
+    "nombre": "Rascador para Gatos con Poste",
+    "descripcion": "Ayuda a tu gato a afilar sus garras y proteger tus muebles.",
+    "precio": 25.00,
+    "categoria": "Mascotas",
+    "SKU": "PET-FUR-CAT-SCR-PST",
+    "etiquetas": ["rascador gato", "mascota", "mueble gato"],
+    "proveedor": { "nombre": "Cat Trees & More", "pais": "China" },
+    "variantes": [
+      { "altura_cm": 50, "cantidad_inventario": 20 }
+    ],
+    "fecha_creacion": "2024-06-18T11:00:00Z"
+  },
+  {
+    "nombre": "Cepillo para Perros de Pelo Largo",
+    "descripcion": "Elimina nudos y pelo suelto fácilmente.",
+    "precio": 10.00,
+    "categoria": "Mascotas",
+    "SKU": "PET-HYG-BRS-DOG-LNG",
+    "etiquetas": ["cepillo perro", "mascota", "higiene", "pelo largo"],
+    "proveedor": { "nombre": "Grooming Pets", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 40 }
+    ],
+    "fecha_creacion": "2024-06-20T09:00:00Z"
+  },
+    {
+    "nombre": "Set de Viaje de Botellas Reutilizables",
+    "descripcion": "Contenedores pequeños para líquidos y cremas en tus viajes.",
+    "precio": 8.00,
+    "categoria": "Accesorios",
+    "SKU": "ACC-TRV-BTL-SET",
+    "etiquetas": ["viaje", "botellas", "reutilizable", "accesorio", "cosmeticos"],
+    "proveedor": { "nombre": "Travel Light", "pais": "China" },
+    "variantes": [
+      { "piezas": 5, "cantidad_inventario": 70 }
+    ],
+    "fecha_creacion": "2024-06-22T10:00:00Z"
+  },
+  {
+    "nombre": "Almohada de Viaje Hinchable",
+    "descripcion": "Cómoda almohada para el cuello, fácil de desinflar y guardar.",
+    "precio": 12.00,
+    "categoria": "Accesorios",
+    "SKU": "ACC-TRV-PLW-INF",
+    "etiquetas": ["almohada viaje", "cuello", "viaje", "accesorio", "hinchable"],
+    "proveedor": { "nombre": "Comfort on the Go", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 60 }
+    ],
+    "fecha_creacion": "2024-06-25T11:00:00Z"
+  },
+  {
+    "nombre": "Candado para Maleta TSA",
+    "descripcion": "Asegura tu equipaje con un candado aprobado por la TSA.",
+    "precio": 10.00,
+    "categoria": "Accesorios",
+    "SKU": "ACC-TRV-LCK-TSA",
+    "etiquetas": ["candado", "maleta", "viaje", "seguridad", "tsa", "accesorio"],
+    "proveedor": { "nombre": "Secure Travel", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 50 }
+    ],
+    "fecha_creacion": "2024-06-28T09:30:00Z"
+  },
+    {
+    "nombre": "Mini Ventilador Portátil USB",
+    "descripcion": "Pequeño ventilador recargable por USB, ideal para verano.",
+    "precio": 10.00,
+    "categoria": "Electrónica",
+    "SKU": "ELE-APP-FAN-USB",
+    "etiquetas": ["ventilador", "portatil", "usb", "verano", "electronica"],
+    "proveedor": { "nombre": "Cool Breeze Tech", "pais": "China" },
+    "variantes": [
+      { "color": "Blanco", "cantidad_inventario": 80 },
+      { "color": "Rosa", "cantidad_inventario": 75 }
+    ],
+    "fecha_creacion": "2024-07-01T10:00:00Z"
+  },
+  {
+    "nombre": "Power Bank 10000mAh",
+    "descripcion": "Cargador portátil para tus dispositivos electrónicos.",
+    "precio": 25.00,
+    "categoria": "Electrónica",
+    "SKU": "ELE-ACC-PWBNK-10K",
+    "etiquetas": ["power bank", "cargador portatil", "bateria externa", "electronica"],
+    "proveedor": { "nombre": "Energy Solutions", "pais": "China" },
+    "variantes": [
+      { "color": "Negro", "cantidad_inventario": 50 },
+      { "color": "Blanco", "cantidad_inventario": 48 }
+    ],
+    "fecha_creacion": "2024-07-05T11:00:00Z"
+  },
+  {
+    "nombre": "Cable USB C a USB C 1 metro",
+    "descripcion": "Cable de carga y datos de alta velocidad.",
+    "precio": 8.00,
+    "categoria": "Electrónica",
+    "SKU": "ELE-ACC-CBL-USBC-1M",
+    "etiquetas": ["cable usb c", "carga", "datos", "electronica"],
+    "proveedor": { "nombre": "Cable Connect", "pais": "China" },
+    "variantes": [
+      { "color": "Negro", "cantidad_inventario": 100 }
+    ],
+    "fecha_creacion": "2024-07-08T09:00:00Z"
+  },
+    {
+    "nombre": "Set de Cubiertos de Acero Inoxidable 24 Piezas",
+    "descripcion": "Servicio completo para 6 personas.",
+    "precio": 30.00,
+    "categoria": "Cocina",
+    "SKU": "KIT-TBL-CTL-24P",
+    "etiquetas": ["cubiertos", "acero inoxidable", "cocina", "set"],
+    "proveedor": { "nombre": "Tableware Masters", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 40 }
+    ],
+    "fecha_creacion": "2024-07-10T14:00:00Z"
+  },
+  {
+    "nombre": "Vasos de Cristal Elegantes - Set de 6",
+    "descripcion": "Vasos para agua o jugo con diseño moderno.",
+    "precio": 20.00,
+    "categoria": "Cocina",
+    "SKU": "KIT-DRK-GLS-SET6",
+    "etiquetas": ["vasos", "cristal", "cocina", "set"],
+    "proveedor": { "nombre": "Glass Art", "pais": "República Checa" },
+    "variantes": [
+      { "cantidad_inventario": 35 }
+    ],
+    "fecha_creacion": "2024-07-12T10:00:00Z"
+  },
+  {
+    "nombre": "Platos de Cerámica Llanos - Set de 4",
+    "descripcion": "Platos resistentes y aptos para microondas.",
+    "precio": 25.00,
+    "categoria": "Cocina",
+    "SKU": "KIT-TBL-PLT-CER-SET4",
+    "etiquetas": ["platos", "ceramica", "cocina", "set"],
+    "proveedor": { "nombre": "Ceramic Homes", "pais": "Portugal" },
+    "variantes": [
+      { "color": "Blanco", "cantidad_inventario": 30 }
+    ],
+    "fecha_creacion": "2024-07-15T09:00:00Z"
+  },
+    {
+    "nombre": "Libro: El Poder del Ahora",
+    "descripcion": "Guía espiritual para vivir en el presente por Eckhart Tolle.",
+    "precio": 15.00,
+    "categoria": "Libros",
+    "SKU": "BOK-SPI-POW-NOW",
+    "etiquetas": ["libro", "espiritualidad", "autoayuda", "eckhart tolle"],
+    "proveedor": { "nombre": "Editorial Iluminación", "pais": "España" },
+    "variantes": [
+      { "formato": "Tapa Blanda", "cantidad_inventario": 70 }
+    ],
+    "fecha_creacion": "2024-07-18T14:00:00Z"
+  },
+  {
+    "nombre": "Novela Histórica: El Nombre de la Rosa",
+    "descripcion": "Misterio medieval por Umberto Eco.",
+    "precio": 18.00,
+    "categoria": "Libros",
+    "SKU": "BOK-NOV-NMB-ROS",
+    "etiquetas": ["libro", "novela historica", "misterio", "umberto eco"],
+    "proveedor": { "nombre": "Editorial Historia", "pais": "Italia" },
+    "variantes": [
+      { "formato": "Tapa Blanda", "cantidad_inventario": 50 }
+    ],
+    "fecha_creacion": "2024-07-20T10:00:00Z"
+  },
+  {
+    "nombre": "Libro de Cocina Vegetariana",
+    "descripcion": "Recetas saludables y deliciosas sin carne.",
+    "precio": 22.00,
+    "categoria": "Libros",
+    "SKU": "BOK-CKB-VEG",
+    "etiquetas": ["libro cocina", "vegetariano", "recetas", "comida saludable"],
+    "proveedor": { "nombre": "Editorial Saludable", "pais": "Argentina" },
+    "variantes": [
+      { "formato": "Tapa Dura", "cantidad_inventario": 40 }
+    ],
+    "fecha_creacion": "2024-07-22T09:00:00Z"
+  },
+    {
+    "nombre": "Pelota de Tenis - Pack de 3",
+    "descripcion": "Pelotas duraderas para práctica.",
+    "precio": 8.00,
+    "categoria": "Deportes",
+    "SKU": "SPT-TEN-BAL-PK3",
+    "etiquetas": ["tenis", "pelota", "deporte"],
+    "proveedor": { "nombre": "Tennis Masters", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 60 }
+    ],
+    "fecha_creacion": "2024-07-25T10:00:00Z"
+  },
+  {
+    "nombre": "Raqueta de Bádminton",
+    "descripcion": "Raqueta ligera ideal para principiantes.",
+    "precio": 15.00,
+    "categoria": "Deportes",
+    "SKU": "SPT-BDM-RQT-BEG",
+    "etiquetas": ["badminton", "raqueta", "deporte", "principiante"],
+    "proveedor": { "nombre": "Racket Sports Co.", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 30 }
+    ],
+    "fecha_creacion": "2024-07-28T11:00:00Z"
+  },
+    {
+    "nombre": "Comida para Peces Tropicales",
+    "descripcion": "Escamas nutritivas para peces de acuario.",
+    "precio": 6.00,
+    "categoria": "Mascotas",
+    "SKU": "PET-FOD-FIS-TRP",
+    "etiquetas": ["comida peces", "mascota", "acuario"],
+    "proveedor": { "nombre": "Aqua Pets", "pais": "Alemania" },
+    "variantes": [
+      { "peso_gr": 100, "cantidad_inventario": 80 }
+    ],
+    "fecha_creacion": "2024-08-01T09:00:00Z"
+  },
+  {
+    "nombre": "Jaula para Hámster Pequeña",
+    "descripcion": "Hábitat básico con rueda y comedero.",
+    "precio": 20.00,
+    "categoria": "Mascotas",
+    "SKU": "PET-HAB-HMS-SML",
+    "etiquetas": ["jaula hamster", "mascota", "roedor", "habitat"],
+    "proveedor": { "nombre": "Small Critters", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 15 }
+    ],
+    "fecha_creacion": "2024-08-05T10:00:00Z"
+  },
+    {
+    "nombre": "Set de Maquillaje Básico",
+    "descripcion": "Incluye base, polvo, rubor y sombras.",
+    "precio": 30.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-MAK-SET-BAS",
+    "etiquetas": ["maquillaje", "set", "belleza", "cosmeticos"],
+    "proveedor": { "nombre": "Beauty Essentials", "pais": "China" },
+    "variantes": [
+      { "tono_piel": "Claro", "cantidad_inventario": 40 },
+      { "tono_piel": "Medio", "cantidad_inventario": 38 }
+    ],
+    "fecha_creacion": "2024-08-08T11:00:00Z"
+  },
+  {
+    "nombre": "Crema Hidratante Facial con SPF",
+    "descripcion": "Hidratación diaria con protección solar.",
+    "precio": 18.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-SKN-CRM-SPF",
+    "etiquetas": ["crema facial", "hidratante", "spf", "proteccion solar", "belleza", "cuidado piel"],
+    "proveedor": { "nombre": "Skin Care Pro", "pais": "Corea del Sur" },
+    "variantes": [
+      { "volumen_ml": 50, "cantidad_inventario": 50 }
+    ],
+    "fecha_creacion": "2024-08-10T09:00:00Z"
+  },
+  {
+    "nombre": "Perfume Eau de Parfum Floral",
+    "descripcion": "Fragancia femenina con notas florales.",
+    "precio": 45.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-FRG-EDP-FLR",
+    "etiquetas": ["perfume", "fragancia", "floral", "belleza", "mujer"],
+    "proveedor": { "nombre": "Parfum Elegance", "pais": "Francia" },
+    "variantes": [
+      { "volumen_ml": 100, "cantidad_inventario": 30 }
+    ],
+    "fecha_creacion": "2024-08-12T14:00:00Z"
+  },
+    {
+    "nombre": "Champú Reparador con Keratina",
+    "descripcion": "Restaura el cabello dañado y fortalece.",
+    "precio": 12.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-HPC-SHP-KRT",
+    "etiquetas": ["champu", "cabello", "keratina", "reparador", "belleza", "cuidado cabello"],
+    "proveedor": { "nombre": "Hair Health", "pais": "Brasil" },
+    "variantes": [
+      { "volumen_ml": 300, "cantidad_inventario": 60 }
+    ],
+    "fecha_creacion": "2024-08-15T10:00:00Z"
+  },
+  {
+    "nombre": "Acondicionador Desenredante",
+    "descripcion": "Suaviza el cabello y facilita el peinado.",
+    "precio": 12.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-HPC-CND-DNT",
+    "etiquetas": ["acondicionador", "cabello", "desenredante", "belleza", "cuidado cabello"],
+    "proveedor": { "nombre": "Hair Health", "pais": "Brasil" },
+    "variantes": [
+      { "volumen_ml": 300, "cantidad_inventario": 55 }
+    ],
+    "fecha_creacion": "2024-08-15T10:00:00Z"
+  },
+  {
+    "nombre": "Mascarilla Facial Purificante",
+    "descripcion": "Limpia los poros y deja la piel fresca.",
+    "precio": 8.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-SKN-MSK-PUR",
+    "etiquetas": ["mascarilla facial", "purificante", "belleza", "cuidado piel"],
+    "proveedor": { "nombre": "Skin Care Pro", "pais": "Corea del Sur" },
+    "variantes": [
+      { "formato": "Sachet Individual", "cantidad_inventario": 100 }
+    ],
+    "fecha_creacion": "2024-08-18T09:00:00Z"
+  },
+  {
+    "nombre": "Esmalte de Uñas Larga Duración",
+    "descripcion": "Color vibrante y acabado duradero.",
+    "precio": 5.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-NAI-PNL-DUR",
+    "etiquetas": ["esmalte uñas", "belleza", "manicura"],
+    "proveedor": { "nombre": "Nail Color Studio", "pais": "China" },
+    "variantes": [
+      { "color": "Rojo Clásico", "cantidad_inventario": 70 },
+      { "color": "Rosa Pastel", "cantidad_inventario": 65 }
+    ],
+    "fecha_creacion": "2024-08-20T11:00:00Z"
+  },
+    {
+    "nombre": "Papel Higiénico Ultra Suave - 12 Rollos",
+    "descripcion": "Máxima suavidad y absorción.",
+    "precio": 10.00,
+    "categoria": "Hogar",
+    "SKU": "HOM-CLE-TPH-12RL",
+    "etiquetas": ["papel higienico", "hogar", "limpieza"],
+    "proveedor": { "nombre": "Clean Living", "pais": "México" },
+    "variantes": [
+      { "cantidad_inventario": 50 }
+    ],
+    "fecha_creacion": "2024-08-22T10:00:00Z"
+  },
+  {
+    "nombre": "Detergente Líquido para Ropa - 2L",
+    "descripcion": "Limpia profundamente y protege los colores.",
+    "precio": 15.00,
+    "categoria": "Hogar",
+    "SKU": "HOM-CLE-DTR-LIQ-2L",
+    "etiquetas": ["detergente ropa", "limpieza", "hogar"],
+    "proveedor": { "nombre": "Sparkle Clean", "pais": "Colombia" },
+    "variantes": [
+      { "cantidad_inventario": 40 }
+    ],
+    "fecha_creacion": "2024-08-25T11:30:00Z"
+  },
+  {
+    "nombre": "Limpiador Multiusos con Amoníaco",
+    "descripcion": "Desinfecta y limpia superficies.",
+    "precio": 5.00,
+    "categoria": "Hogar",
+    "SKU": "HOM-CLE-MLT-AMN",
+    "etiquetas": ["limpiador multiusos", "amoniaco", "limpieza", "hogar", "desinfectante"],
+    "proveedor": { "nombre": "Fresh Home", "pais": "España" },
+    "variantes": [
+      { "volumen_ml": 750, "cantidad_inventario": 80 }
+    ],
+    "fecha_creacion": "2024-08-28T09:00:00Z"
+  },
+    {
+    "nombre": "Bolsas de Basura Resistentes - 30 Unidades",
+    "descripcion": "Bolsas grandes y duraderas para la basura.",
+    "precio": 7.00,
+    "categoria": "Hogar",
+    "SKU": "HOM-CLE-BAG-TRH-30",
+    "etiquetas": ["bolsas basura", "hogar", "limpieza"],
+    "proveedor": { "nombre": "Waste Management Solutions", "pais": "China" },
+    "variantes": [
+      { "capacidad": "50 litros", "cantidad_inventario": 60 }
+    ],
+    "fecha_creacion": "2024-08-30T10:00:00Z"
+  },
+  {
+    "nombre": "Ambientador Automático Spray",
+    "descripcion": "Mantiene tu hogar con un aroma fresco.",
+    "precio": 15.00,
+    "categoria": "Hogar",
+    "SKU": "HOM-AIR-FRS-AUT",
+    "etiquetas": ["ambientador", "hogar", "aroma", "automatico"],
+    "proveedor": { "nombre": "Fresh Scents", "pais": "Estados Unidos" },
+    "variantes": [
+      { "aroma": "Flores Frescas", "cantidad_inventario": 40 },
+      { "aroma": "Brisa Marina", "cantidad_inventario": 38 }
+    ],
+    "fecha_creacion": "2024-09-01T11:00:00Z"
+  },
+    {
+    "nombre": "Set de Jardinería Básica - 3 Herramientas",
+    "descripcion": "Pala, rastrillo y trasplantador para jardinería ligera.",
+    "precio": 15.00,
+    "categoria": "Jardín",
+    "SKU": "GRD-KIT-GTL-BAS",
+    "etiquetas": ["jardineria", "herramientas", "jardin"],
+    "proveedor": { "nombre": "Green Thumb Tools", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 30 }
+    ],
+    "fecha_creacion": "2024-09-05T14:00:00Z"
+  },
+  {
+    "nombre": "Semillas de Tomate Cherry",
+    "descripcion": "Fáciles de cultivar en macetas o jardín.",
+    "precio": 3.00,
+    "categoria": "Jardín",
+    "SKU": "GRD-SDA-TOM-CHY",
+    "etiquetas": ["semillas", "tomate", "jardineria", "huerto"],
+    "proveedor": { "nombre": "Nature's Seeds", "pais": "Italia" },
+    "variantes": [
+      { "cantidad_semillas": 50, "cantidad_inventario": 100 }
+    ],
+    "fecha_creacion": "2024-09-08T09:00:00Z"
+  },
+  {
+    "nombre": "Tierra para Macetas Universal - 5 Litros",
+    "descripcion": "Sustrato nutritivo para todo tipo de plantas en macetas.",
+    "precio": 8.00,
+    "categoria": "Jardín",
+    "SKU": "GRD-SUP-SOIL-UNI",
+    "etiquetas": ["tierra", "sustrato", "macetas", "jardineria", "plantas"],
+    "proveedor": { "nombre": "Grow Happy Plants", "pais": "España" },
+    "variantes": [
+      { "volumen_litros": 5, "cantidad_inventario": 50 }
+    ],
+    "fecha_creacion": "2024-09-10T10:00:00Z"
+  },
+    {
+    "nombre": "Manguera de Jardín Extensible 15m",
+    "descripcion": "Se expande con la presión del agua, fácil de guardar.",
+    "precio": 25.00,
+    "categoria": "Jardín",
+    "SKU": "GRD-EQU-HOS-EXT-15M",
+    "etiquetas": ["manguera", "jardin", "regar", "extensible"],
+    "proveedor": { "nombre": "Water Smart", "pais": "China" },
+    "variantes": [
+      { "longitud_m": 15, "cantidad_inventario": 20 }
+    ],
+    "fecha_creacion": "2024-09-12T11:00:00Z"
+  },
+  {
+    "nombre": "Guantes de Jardinería con Garras",
+    "descripcion": "Protege tus manos y facilita la excavación.",
+    "precio": 12.00,
+    "categoria": "Jardín",
+    "SKU": "GRD-ACC-GLV-CLW",
+    "etiquetas": ["guantes jardineria", "garras", "jardin"],
+    "proveedor": { "nombre": "Tough Garden Gear", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 40 }
+    ],
+    "fecha_creacion": "2024-09-15T09:00:00Z"
+  },
+    {
+    "nombre": "Kit de Costura de Viaje",
+    "descripcion": "Pequeño kit para arreglos rápidos fuera de casa.",
+    "precio": 5.00,
+    "categoria": "Arte y Manualidades",
+    "SKU": "ART-KIT-SWG-TRV",
+    "etiquetas": ["costura", "kit", "viaje", "manualidades"],
+    "proveedor": { "nombre": "Sew Quick", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 80 }
+    ],
+    "fecha_creacion": "2024-09-18T10:00:00Z"
+  },
+  {
+    "nombre": "Set de Pintura Acrílica - 12 Colores",
+    "descripcion": "Pinturas acrílicas para artistas y aficionados.",
+    "precio": 20.00,
+    "categoria": "Arte y Manualidades",
+    "SKU": "ART-SUP-PNT-ACR-12",
+    "etiquetas": ["pintura acrilica", "set", "arte", "manualidades"],
+    "proveedor": { "nombre": "Acrylic Arts Co.", "pais": "China" },
+    "variantes": [
+      { "cantidad_colores": 12, "cantidad_inventario": 30 }
+    ],
+    "fecha_creacion": "2024-09-20T11:00:00Z"
+  },
+    {
+    "nombre": "Aro de Luz LED para Selfies",
+    "descripcion": "Mejora la iluminación para tus fotos y videos.",
+    "precio": 15.00,
+    "categoria": "Electrónica",
+    "SKU": "ELE-ACC-LGT-RING",
+    "etiquetas": ["aro de luz", "led", "selfie", "video", "electronica"],
+    "proveedor": { "nombre": "Bright Shots", "pais": "China" },
+    "variantes": [
+      { "diametro_cm": 20, "cantidad_inventario": 40 }
+    ],
+    "fecha_creacion": "2024-09-22T14:00:00Z"
+  },
+  {
+    "nombre": "Trípode Flexible para Cámara/Teléfono",
+    "descripcion": "Se adapta a cualquier superficie para tomas estables.",
+    "precio": 18.00,
+    "categoria": "Electrónica",
+    "SKU": "ELE-ACC-TRP-FLX",
+    "etiquetas": ["tripode", "flexible", "camara", "telefono", "electronica", "fotografia"],
+    "proveedor": { "nombre": "Stable Mounts", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 35 }
+    ],
+    "fecha_creacion": "2024-09-25T10:00:00Z"
+  },
+    {
+    "nombre": "Funda para Tablet Universal 10\"",
+    "descripcion": "Protección compatible con la mayoría de tablets de 10 pulgadas.",
+    "precio": 20.00,
+    "categoria": "Accesorios",
+    "SKU": "ACC-TAB-CAS-UNI10",
+    "etiquetas": ["funda tablet", "universal", "accesorio", "protector"],
+    "proveedor": { "nombre": "Tablet Guard", "pais": "China" },
+    "variantes": [
+      { "color": "Negro", "cantidad_inventario": 50 },
+      { "color": "Rosa", "cantidad_inventario": 45 }
+    ],
+    "fecha_creacion": "2024-09-28T09:00:00Z"
+  },
+  {
+    "nombre": "Soporte para Teléfono para Coche",
+    "descripcion": "Montaje seguro para tu smartphone en el coche.",
+    "precio": 15.00,
+    "categoria": "Accesorios",
+    "SKU": "ACC-PHN-MNT-CAR",
+    "etiquetas": ["soporte telefono", "coche", "accesorio", "smartphone"],
+    "proveedor": { "nombre": "Car Tech Accessories", "pais": "China" },
+    "variantes": [
+      { "tipo_montaje": "Ventosa", "cantidad_inventario": 60 },
+      { "tipo_montaje": "Rejilla Ventilación", "cantidad_inventario": 55 }
+    ],
+    "fecha_creacion": "2024-10-01T11:00:00Z"
+  },
+    {
+    "nombre": "Pelota de Yoga Anti-explosión",
+    "descripcion": "Ideal para ejercicios de equilibrio y fortalecimiento del core.",
+    "precio": 25.00,
+    "categoria": "Deportes",
+    "SKU": "SPT-FIT-BAL-YGA",
+    "etiquetas": ["pelota yoga", "fitness", "ejercicio", "equilibrio", "deporte"],
+    "proveedor": { "nombre": "Fitness Balance", "pais": "China" },
+    "variantes": [
+      { "diametro_cm": 65, "color": "Gris", "cantidad_inventario": 30 }
+    ],
+    "fecha_creacion": "2024-10-05T14:00:00Z"
+  },
+  {
+    "nombre": "Comba con Contador Digital",
+    "descripcion": "Monitoriza tus saltos y calorías quemadas.",
+    "precio": 18.00,
+    "categoria": "Deportes",
+    "SKU": "SPT-FIT-JPR-CNT",
+    "etiquetas": ["comba", "cuerda saltar", "contador digital", "fitness", "cardio", "deporte"],
+    "proveedor": { "nombre": "Cardio Stats", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 40 }
+    ],
+    "fecha_creacion": "2024-10-08T09:00:00Z"
+  },
+    {
+    "nombre": "Set de Microscopio para Niños",
+    "descripcion": "Inicia a los pequeños en el mundo de la ciencia.",
+    "precio": 35.00,
+    "categoria": "Juguetes",
+    "SKU": "TOY-EDU-MSC-KID",
+    "etiquetas": ["microscopio", "juguete educativo", "ciencia", "niños"],
+    "proveedor": { "nombre": "Science Fun Toys", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 20 }
+    ],
+    "fecha_creacion": "2024-10-10T10:00:00Z"
+  },
+  {
+    "nombre": "Kit de Robot Programable para Niños",
+    "descripcion": "Aprende codificación jugando.",
+    "precio": 80.00,
+    "categoria": "Juguetes",
+    "SKU": "TOY-EDU-RBT-PRG",
+    "etiquetas": ["robot", "programable", "juguete educativo", "codificacion", "niños"],
+    "proveedor": { "nombre": "Coding Fun", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 15 }
+    ],
+    "fecha_creacion": "2024-10-12T11:00:00Z"
+  },
+    {
+    "nombre": "Libro Infantil Ilustrado: Animales de la Selva",
+    "descripcion": "Libro con imágenes coloridas de animales salvajes.",
+    "precio": 10.00,
+    "categoria": "Libros",
+    "SKU": "BOK-INF-ILL-ANM",
+    "etiquetas": ["libro infantil", "ilustrado", "animales", "selva"],
+    "proveedor": { "nombre": "Editorial Peques", "pais": "España" },
+    "variantes": [
+      { "formato": "Tapa Dura", "cantidad_inventario": 60 }
+    ],
+    "fecha_creacion": "2024-10-15T14:00:00Z"
+  },
+  {
+    "nombre": "Libro de Recetas Fáciles para Principiantes",
+    "descripcion": "Recetas sencillas para quienes empiezan a cocinar.",
+    "precio": 18.00,
+    "categoria": "Libros",
+    "SKU": "BOK-CKB-EAS-BEG",
+    "etiquetas": ["libro cocina", "recetas faciles", "principiantes"],
+    "proveedor": { "nombre": "Editorial Cocina Fácil", "pais": "Argentina" },
+    "variantes": [
+      { "formato": "Tapa Blanda", "cantidad_inventario": 40 }
+    ],
+    "fecha_creacion": "2024-10-18T10:00:00Z"
+  },
+    {
+    "nombre": "Champú para Cabello Graso",
+    "descripcion": "Limpia profundamente y controla el exceso de grasa.",
+    "precio": 12.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-HPC-SHP-OIL",
+    "etiquetas": ["champu", "cabello graso", "belleza", "cuidado cabello"],
+    "proveedor": { "nombre": "Hair Balance", "pais": "Brasil" },
+    "variantes": [
+      { "volumen_ml": 300, "cantidad_inventario": 50 }
+    ],
+    "fecha_creacion": "2024-10-20T09:00:00Z"
+  },
+  {
+    "nombre": "Acondicionador para Cabello Seco",
+    "descripcion": "Hidrata y nutre el cabello seco y dañado.",
+    "precio": 12.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-HPC-CND-DRY",
+    "etiquetas": ["acondicionador", "cabello seco", "hidratante", "belleza", "cuidado cabello"],
+    "proveedor": { "nombre": "Hair Hydration", "pais": "Brasil" },
+    "variantes": [
+      { "volumen_ml": 300, "cantidad_inventario": 55 }
+    ],
+    "fecha_creacion": "2024-10-20T09:00:00Z"
+  },
+    {
+    "nombre": "Juego de Toallas de Mano - Set de 2",
+    "descripcion": "Toallas pequeñas y suaves para el baño o tocador.",
+    "precio": 10.00,
+    "categoria": "Baño",
+    "SKU": "BTH-TOW-HND-SET2",
+    "etiquetas": ["toallas", "mano", "baño", "set"],
+    "proveedor": { "nombre": "Bath Comfort", "pais": "Turquía" },
+    "variantes": [
+      { "color": "Blanco", "cantidad_inventario": 60 },
+      { "color": "Gris Claro", "cantidad_inventario": 55 }
+    ],
+    "fecha_creacion": "2024-10-22T10:00:00Z"
+  },
+  {
+    "nombre": "Alfombra de Baño Antideslizante",
+    "descripcion": "Seguridad y confort para tu baño.",
+    "precio": 15.00,
+    "categoria": "Baño",
+    "SKU": "BTH-MAT-ANT",
+    "etiquetas": ["alfombra baño", "antideslizante", "baño"],
+    "proveedor": { "nombre": "Safe Bath", "pais": "China" },
+    "variantes": [
+      { "color": "Blanco", "cantidad_inventario": 40 },
+      { "color": "Azul", "cantidad_inventario": 38 }
+    ],
+    "fecha_creacion": "2024-10-25T11:00:00Z"
+  },
+  {
+    "nombre": "Cortina de Ducha Impermeable",
+    "descripcion": "Diseño moderno y funcional para tu ducha.",
+    "precio": 20.00,
+    "categoria": "Baño",
+    "SKU": "BTH-ACC-CUR-IMP",
+    "etiquetas": ["cortina ducha", "impermeable", "baño", "accesorio"],
+    "proveedor": { "nombre": "Shower Style", "pais": "China" },
+    "variantes": [
+      { "diseño": "Geométrico", "cantidad_inventario": 30 }
+    ],
+    "fecha_creacion": "2024-10-28T09:30:00Z"
+  },
+    {
+    "nombre": "Espejo de Maquillaje con Luz LED",
+    "descripcion": "Ideal para aplicar maquillaje con precisión.",
+    "precio": 25.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-ACC-MIR-LED",
+    "etiquetas": ["espejo maquillaje", "luz led", "belleza", "accesorio"],
+    "proveedor": { "nombre": "Beauty Bright", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 35 }
+    ],
+    "fecha_creacion": "2024-11-01T10:00:00Z"
+  },
+  {
+    "nombre": "Set de Brochas de Maquillaje - 10 Piezas",
+    "descripcion": "Brochas suaves para un acabado profesional.",
+    "precio": 20.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-ACC-BRS-SET10",
+    "etiquetas": ["brochas maquillaje", "set", "belleza", "accesorio"],
+    "proveedor": { "nombre": "Brush Masters", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 40 }
+    ],
+    "fecha_creacion": "2024-11-05T11:00:00Z"
+  },
+    {
+    "nombre": "Cepillo de Dientes Eléctrico",
+    "descripcion": "Limpieza dental superior con tecnología sónica.",
+    "precio": 40.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-HYG-TBR-ELE",
+    "etiquetas": ["cepillo dientes electrico", "higiene bucal", "belleza"],
+    "proveedor": { "nombre": "Oral Care Pro", "pais": "Alemania" },
+    "variantes": [
+      { "color": "Blanco", "cantidad_inventario": 30 }
+    ],
+    "fecha_creacion": "2024-11-08T09:00:00Z"
+  },
+  {
+    "nombre": "Pasta Dental Blanqueadora",
+    "descripcion": "Ayuda a eliminar manchas y blanquear los dientes.",
+    "precio": 5.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-HYG-PST-BLC",
+    "etiquetas": ["pasta dental", "blanqueadora", "higiene bucal", "belleza"],
+    "proveedor": { "nombre": "White Smile Co.", "pais": "Estados Unidos" },
+    "variantes": [
+      { "volumen_ml": 75, "cantidad_inventario": 100 }
+    ],
+    "fecha_creacion": "2024-11-10T10:00:00Z"
+  },
+  {
+    "nombre": "Hilo Dental con Flúor",
+    "descripcion": "Complementa tu rutina de higiene bucal.",
+    "precio": 3.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-HYG-FLS-FLU",
+    "etiquetas": ["hilo dental", "higiene bucal", "belleza"],
+    "proveedor": { "nombre": "Oral Essentials", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 120 }
+    ],
+    "fecha_creacion": "2024-11-12T11:00:00Z"
+  },
+    {
+    "nombre": "Set de Manicura y Pedicura",
+    "descripcion": "Herramientas esenciales para el cuidado de uñas.",
+    "precio": 15.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-NAI-KIT-MNP",
+    "etiquetas": ["manicura", "pedicura", "cuidado uñas", "belleza", "set"],
+    "proveedor": { "nombre": "Nail Care Solutions", "pais": "China" },
+    "variantes": [
+      { "cantidad_inventario": 40 }
+    ],
+    "fecha_creacion": "2024-11-15T14:00:00Z"
+  },
+  {
+    "nombre": "Quitaesmalte sin Acetona",
+    "descripcion": "Suave para tus uñas.",
+    "precio": 6.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-NAI-RMV-NAS",
+    "etiquetas": ["quitaesmalte", "uñas", "belleza"],
+    "proveedor": {"nombre": "Gentle Nail Care", "pais": "Francia"},
+    "variantes": [{"volumen_ml": 150, "cantidad_inventario": 70}],
+    "fecha_creacion": "2024-11-18T10:00:00Z"
+  },
+  {
+    "nombre": "Crema para Manos Hidratante",
+    "descripcion": "Nutre y suaviza la piel de tus manos.",
+    "precio": 8.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-SKN-CRM-HND",
+    "etiquetas": ["crema manos", "hidratante", "belleza", "cuidado piel"],
+    "proveedor": {"nombre": "Hand Care Experts", "pais": "Corea del Sur"},
+    "variantes": [{"volumen_ml": 100, "cantidad_inventario": 60}],
+    "fecha_creacion": "2024-11-20T11:00:00Z"
+  },
+  {
+    "nombre": "Protector Labial con SPF",
+    "descripcion": "Protege tus labios del sol y los mantiene hidratados.",
+    "precio": 4.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-ACC-LIP-SPF",
+    "etiquetas": ["protector labial", "spf", "belleza", "cuidado labios"],
+    "proveedor": {"nombre": "Lip Care Solutions", "pais": "Estados Unidos"},
+    "variantes": [{"cantidad_inventario": 150}],
+    "fecha_creacion": "2024-11-22T09:00:00Z"
+  },
+  {
+    "nombre": "Gel de Ducha Exfoliante",
+    "descripcion": "Limpia la piel y elimina células muertas.",
+    "precio": 10.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-BTH-GEL-EXF",
+    "etiquetas": ["gel ducha", "exfoliante", "belleza", "cuidado corporal"],
+    "proveedor": {"nombre": "Body Fresh", "pais": "Italia"},
+    "variantes": [{"volumen_ml": 250, "cantidad_inventario": 70}],
+    "fecha_creacion": "2024-11-25T10:00:00Z"
+  },
+  {
+    "nombre": "Loción Corporal Hidratante",
+    "descripcion": "Deja la piel suave y nutrida.",
+    "precio": 15.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-SKN-LOT-BODY",
+    "etiquetas": ["locion corporal", "hidratante", "belleza", "cuidado corporal"],
+    "proveedor": {"nombre": "Body Nourish", "pais": "Brasil"},
+    "variantes": [{"volumen_ml": 400, "cantidad_inventario": 60}],
+    "fecha_creacion": "2024-11-28T11:00:00Z"
+  },
+  {
+    "nombre": "Desodorante Antitranspirante Roll-on",
+    "descripcion": "Protección duradera contra el sudor.",
+    "precio": 6.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-HYG-DDR-ROL",
+    "etiquetas": ["desodorante", "antitranspirante", "higiene personal", "belleza"],
+    "proveedor": {"nombre": "Fresh Underarms", "pais": "Alemania"},
+    "variantes": [{"cantidad_inventario": 80}],
+    "fecha_creacion": "2024-11-30T09:00:00Z"
+  },
+  {
+    "nombre": "Crema de Afeitar para Hombre",
+    "descripcion": "Permite un afeitado suave y apurado.",
+    "precio": 8.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-MEN-SHV-CRM",
+    "etiquetas": ["crema afeitar", "hombre", "belleza", "cuidado personal"],
+    "proveedor": {"nombre": "Gentle Shave Co.", "pais": "Reino Unido"},
+    "variantes": [{"volumen_ml": 150, "cantidad_inventario": 50}],
+    "fecha_creacion": "2024-12-01T10:00:00Z"
+  },
+    {
+    "nombre": "Set de Afeitado Clásico",
+    "descripcion": "Brocha y recipiente para un afeitado tradicional.",
+    "precio": 25.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-MEN-SHV-SET",
+    "etiquetas": ["afeitado", "set", "hombre", "belleza", "cuidado personal"],
+    "proveedor": {"nombre": "Classic Shave Supplies", "pais": "Italia"},
+    "variantes": [{"cantidad_inventario": 30}],
+    "fecha_creacion": "2024-12-05T14:00:00Z"
+  },
+    {
+    "nombre": "Aceite para Barba Nutritivo",
+    "descripcion": "Suaviza e hidrata la barba y la piel debajo.",
+    "precio": 15.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-MEN-BRD-OIL",
+    "etiquetas": ["aceite barba", "cuidado barba", "hombre", "belleza"],
+    "proveedor": {"nombre": "Beard Care Co.", "pais": "Canadá"},
+    "variantes": [{"volumen_ml": 30, "cantidad_inventario": 40}],
+    "fecha_creacion": "2024-12-08T09:00:00Z"
+  },
+    {
+    "nombre": "Colonia Fresca para Hombre",
+    "descripcion": "Fragancia ligera y refrescante para uso diario.",
+    "precio": 30.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-FRG-COL-MEN",
+    "etiquetas": ["colonia", "fragancia", "hombre", "belleza"],
+    "proveedor": {"nombre": "Masculine Scents", "pais": "Francia"},
+    "variantes": [{"volumen_ml": 100, "cantidad_inventario": 35}],
+    "fecha_creacion": "2024-12-10T10:00:00Z"
+  },
+  {
+    "nombre": "Gel Fijador para Cabello Hombre",
+    "descripcion": "Mantiene el peinado en su lugar con acabado natural.",
+    "precio": 8.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-MEN-HPC-GEL",
+    "etiquetas": ["gel cabello", "fijador", "hombre", "belleza", "cuidado cabello"],
+    "proveedor": {"nombre": "Hair Style Men", "pais": "China"},
+    "variantes": [{"volumen_ml": 150, "cantidad_inventario": 60}],
+    "fecha_creacion": "2024-12-12T11:00:00Z"
+  },
+    {
+    "nombre": "Set de Maquillaje para Ojos",
+    "descripcion": "Sombras, delineador y máscara para crear looks de ojos.",
+    "precio": 25.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-MAK-SET-EYE",
+    "etiquetas": ["maquillaje ojos", "sombras", "delineador", "mascara pestañas", "belleza", "set"],
+    "proveedor": {"nombre": "Eye Look Masters", "pais": "China"},
+    "variantes": [{"color": "Neutros y Ahumados", "cantidad_inventario": 40}],
+    "fecha_creacion": "2024-12-15T14:00:00Z"
+  },
+  {
+    "nombre": "Labial Líquido Mate",
+    "descripcion": "Color intenso y acabado mate de larga duración.",
+    "precio": 12.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-MAK-LIP-MAT",
+    "etiquetas": ["labial", "mate", "maquillaje labios", "belleza"],
+    "proveedor": {"nombre": "Lip Color Co.", "pais": "Italia"},
+    "variantes": [{"color": "Rojo Intenso", "cantidad_inventario": 30}, {"color": "Nude Rosado", "cantidad_inventario": 35}],
+    "fecha_creacion": "2024-12-18T10:00:00Z"
+  },
+  {
+    "nombre": "Rubor en Polvo Compacto",
+    "descripcion": "Proporciona un toque de color saludable a las mejillas.",
+    "precio": 10.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-MAK-BLS-CMP",
+    "etiquetas": ["rubor", "colorete", "maquillaje", "belleza"],
+    "proveedor": {"nombre": "Cheek Color Studio", "pais": "China"},
+    "variantes": [{"tono": "Rosa Melocotón", "cantidad_inventario": 50}, {"tono": "Coral Suave", "cantidad_inventario": 48}],
+    "fecha_creacion": "2024-12-20T11:00:00Z"
+  },
+    {
+    "nombre": "Iluminador Líquido",
+    "descripcion": "Realza los puntos altos del rostro para un brillo natural.",
+    "precio": 15.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-MAK-HLG-LIQ",
+    "etiquetas": ["iluminador", "maquillaje", "brillo", "belleza"],
+    "proveedor": {"nombre": "Glow Up Cosmetics", "pais": "Corea del Sur"},
+    "variantes": [{"tono": "Champagne", "cantidad_inventario": 40}, {"tono": "Dorado Rosado", "cantidad_inventario": 38}],
+    "fecha_creacion": "2024-12-22T09:00:00Z"
+  },
+  {
+    "nombre": "Bronceador en Polvo",
+    "descripcion": "Define el contorno y da un efecto bronceado natural.",
+    "precio": 14.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-MAK-BRZ-PWD",
+    "etiquetas": ["bronceador", "maquillaje", "contorno", "belleza"],
+    "proveedor": {"nombre": "Sun Kissed Beauty", "pais": "Estados Unidos"},
+    "variantes": [{"tono": "Medio", "cantidad_inventario": 45}],
+    "fecha_creacion": "2024-12-25T10:00:00Z"
+  }
+  // ¡Aquí irían 60 productos más para alcanzar los 110!
+  // (Continuaría generando siguiendo el patrón de categorías y campos)
+  ,
+   {
+    "nombre": "Set de delineadores de ojos a prueba de agua",
+    "descripcion": "Delineadores de larga duración, no se corren.",
+    "precio": 18.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-MAK-EYL-WPR",
+    "etiquetas": ["delineador ojos", "a prueba de agua", "maquillaje", "belleza"],
+    "proveedor": {"nombre": "Eye Line Experts", "pais": "China"},
+    "variantes": [{"colores": "Negro y Marrón", "cantidad_inventario": 50}],
+    "fecha_creacion": "2024-12-28T11:00:00Z"
+  },
+  {
+    "nombre": "Máscara de pestañas voluminizadora",
+    "descripcion": "Da volumen y alarga las pestañas.",
+    "precio": 15.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-MAK-MSC-VOL",
+    "etiquetas": ["mascara pestañas", "rimel", "volumen", "maquillaje", "belleza"],
+    "proveedor": {"nombre": "Lash Perfect", "pais": "Italia"},
+    "variantes": [{"color": "Negro", "cantidad_inventario": 60}],
+    "fecha_creacion": "2025-01-01T09:00:00Z"
+  },
+  {
+    "nombre": "Sombra de ojos individual",
+    "descripcion": "Color de sombra vibrante y pigmentado.",
+    "precio": 7.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-MAK-SHD-IND-G",
+    "etiquetas": ["sombra ojos", "maquillaje", "belleza"],
+    "proveedor": {"nombre": "Color Pigments Co.", "pais": "China"},
+    "variantes": [{"color": "Gris Humo", "cantidad_inventario": 40}, {"color": "Dorado", "cantidad_inventario": 45}],
+    "fecha_creacion": "2025-01-05T10:00:00Z"
+  },
+  {
+    "nombre": "Primer facial matificante",
+    "descripcion": "Prepara la piel y controla el brillo.",
+    "precio": 18.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-MAK-PRM-MAT",
+    "etiquetas": ["primer facial", "matificante", "maquillaje", "belleza"],
+    "proveedor": {"nombre": "Skin Prep Solutions", "pais": "Corea del Sur"},
+    "variantes": [{"volumen_ml": 30, "cantidad_inventario": 35}],
+    "fecha_creacion": "2025-01-08T11:00:00Z"
+  },
+  {
+    "nombre": "Spray fijador de maquillaje",
+    "descripcion": "Ayuda a que el maquillaje dure más tiempo.",
+    "precio": 16.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-MAK-SPR-FIX",
+    "etiquetas": ["spray fijador", "maquillaje", "belleza", "larga duracion"],
+    "proveedor": {"nombre": "Lasting Beauty", "pais": "Estados Unidos"},
+    "variantes": [{"volumen_ml": 100, "cantidad_inventario": 50}],
+    "fecha_creacion": "2025-01-10T09:00:00Z"
+  },
+  {
+    "nombre": "Desmaquillante bifásico",
+    "descripcion": "Elimina maquillaje resistente, incluso a prueba de agua.",
+    "precio": 9.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-CLE-RMV-BPH",
+    "etiquetas": ["desmaquillante", "bifasico", "belleza", "limpieza facial"],
+    "proveedor": {"nombre": "Clean Face Co.", "pais": "Francia"},
+    "variantes": [{"volumen_ml": 125, "cantidad_inventario": 70}],
+    "fecha_creacion": "2025-01-12T10:00:00Z"
+  },
+  {
+    "nombre": "Limpiador facial en gel",
+    "descripcion": "Limpia los poros sin resecar la piel.",
+    "precio": 11.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-SKN-CLN-GEL",
+    "etiquetas": ["limpiador facial", "gel", "belleza", "cuidado piel"],
+    "proveedor": {"nombre": "Pure Skin Solutions", "pais": "Corea del Sur"},
+    "variantes": [{"volumen_ml": 150, "cantidad_inventario": 60}],
+    "fecha_creacion": "2025-01-15T11:00:00Z"
+  },
+  {
+    "nombre": "Tónico facial refrescante",
+    "descripcion": "Equilibra el pH de la piel y la prepara para hidratación.",
+    "precio": 13.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-SKN-TON-RFR",
+    "etiquetas": ["tonico facial", "belleza", "cuidado piel"],
+    "proveedor": {"nombre": "Fresh Face Essentials", "pais": "España"},
+    "variantes": [{"volumen_ml": 200, "cantidad_inventario": 55}],
+    "fecha_creacion": "2025-01-18T14:00:00Z"
+  },
+  {
+    "nombre": "Sérum facial con Vitamina C",
+    "descripcion": "Ilumina la piel y reduce manchas.",
+    "precio": 25.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-SKN-SRM-VTC",
+    "etiquetas": ["serum facial", "vitamina c", "belleza", "cuidado piel", "antimanchas"],
+    "proveedor": {"nombre": "Vita Skin", "pais": "Corea del Sur"},
+    "variantes": [{"volumen_ml": 30, "cantidad_inventario": 40}],
+    "fecha_creacion": "2025-01-20T10:00:00Z"
+  },
+  {
+    "nombre": "Crema para contorno de ojos",
+    "descripcion": "Reduce ojeras y bolsas.",
+    "precio": 20.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-SKN-CRM-EYE",
+    "etiquetas": ["crema contorno ojos", "ojeras", "bolsas", "belleza", "cuidado piel"],
+    "proveedor": {"nombre": "Eye Care Specialists", "pais": "Francia"},
+    "variantes": [{"volumen_ml": 15, "cantidad_inventario": 35}],
+    "fecha_creacion": "2025-01-22T11:00:00Z"
+  }
+  // 100 documentos hasta aquí. Añado 10 más.
+  ,
+    {
+    "nombre": "Exfoliante corporal de café",
+    "descripcion": "Exfolia y revitaliza la piel del cuerpo.",
+    "precio": 12.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-BTH-EXF-CFE",
+    "etiquetas": ["exfoliante corporal", "cafe", "belleza", "cuidado corporal"],
+    "proveedor": {"nombre": "Body Scrub Co.", "pais": "Brasil"},
+    "variantes": [{"peso_gr": 250, "cantidad_inventario": 50}],
+    "fecha_creacion": "2025-01-25T14:00:00Z"
+  },
+  {
+    "nombre": "Aceite corporal de almendras",
+    "descripcion": "Hidratación profunda para la piel seca.",
+    "precio": 14.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-SKN-OIL-ALM",
+    "etiquetas": ["aceite corporal", "almendras", "hidratante", "belleza", "cuidado corporal"],
+    "proveedor": {"nombre": "Natural Oils", "pais": "España"},
+    "variantes": [{"volumen_ml": 150, "cantidad_inventario": 45}],
+    "fecha_creacion": "2025-01-28T10:00:00Z"
+  },
+  {
+    "nombre": "Crema de pies reparadora",
+    "descripcion": "Repara talones agrietados y piel seca en los pies.",
+    "precio": 9.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-SKN-CRM-FOT",
+    "etiquetas": ["crema pies", "reparadora", "belleza", "cuidado pies"],
+    "proveedor": {"nombre": "Foot Care Experts", "pais": "Alemania"},
+    "variantes": [{"volumen_ml": 100, "cantidad_inventario": 60}],
+    "fecha_creacion": "2025-01-30T11:00:00Z"
+  },
+  {
+    "nombre": "Desodorante en spray floral",
+    "descripcion": "Protección y fragancia fresca durante todo el día.",
+    "precio": 7.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-HYG-DDR-SPR-FLR",
+    "etiquetas": ["desodorante spray", "floral", "higiene personal", "belleza"],
+    "proveedor": {"nombre": "Fresh Scents", "pais": "Estados Unidos"},
+    "variantes": [{"volumen_ml": 150, "cantidad_inventario": 70}],
+    "fecha_creacion": "2025-02-01T09:00:00Z"
+  },
+  {
+    "nombre": "Jabón líquido de manos antibacteriano",
+    "descripcion": "Limpia y protege tus manos de bacterias.",
+    "precio": 4.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-HYG-SWP-LIQ-ANT",
+    "etiquetas": ["jabon liquido manos", "antibacteriano", "higiene personal", "belleza"],
+    "proveedor": {"nombre": "Clean Hands Co.", "pais": "China"},
+    "variantes": [{"volumen_ml": 250, "cantidad_inventario": 100}],
+    "fecha_creacion": "2025-02-05T10:00:00Z"
+  },
+  {
+    "nombre": "Enjuague bucal refrescante",
+    "descripcion": "Completa tu rutina de higiene oral para un aliento fresco.",
+    "precio": 6.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-HYG-MWS-RFR",
+    "etiquetas": ["enjuague bucal", "higiene bucal", "aliento fresco", "belleza"],
+    "proveedor": {"nombre": "Oral Care Pro", "pais": "Alemania"},
+    "variantes": [{"volumen_ml": 500, "cantidad_inventario": 80}],
+    "fecha_creacion": "2025-02-08T11:00:00Z"
+  },
+  {
+    "nombre": "Esponja de baño exfoliante",
+    "descripcion": "Ayuda a eliminar impurezas de la piel en la ducha.",
+    "precio": 3.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-BTH-SPG-EXF",
+    "etiquetas": ["esponja baño", "exfoliante", "belleza", "accesorios baño"],
+    "proveedor": {"nombre": "Bath Accessories", "pais": "China"},
+    "variantes": [{"color": "Rosa", "cantidad_inventario": 120}],
+    "fecha_creacion": "2025-02-10T09:00:00Z"
+  },
+  {
+    "nombre": "Gorro de ducha reutilizable",
+    "descripcion": "Protege tu cabello del agua en la ducha.",
+    "precio": 5.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-ACC-SPC-SHR",
+    "etiquetas": ["gorro ducha", "reutilizable", "belleza", "accesorios baño", "cuidado cabello"],
+    "proveedor": {"nombre": "Shower Essentials", "pais": "China"},
+    "variantes": [{"cantidad_inventario": 100}],
+    "fecha_creacion": "2025-02-12T10:00:00Z"
+  },
+    {
+    "nombre": "Pinzas de depilar de precisión",
+    "descripcion": "Ideal para depilar cejas con exactitud.",
+    "precio": 7.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-ACC-TWZ-PRE",
+    "etiquetas": ["pinzas depilar", "precision", "belleza", "accesorios"],
+    "proveedor": {"nombre": "Beauty Tools Co.", "pais": "China"},
+    "variantes": [{"material": "Acero Inoxidable", "cantidad_inventario": 50}],
+    "fecha_creacion": "2025-02-15T14:00:00Z"
+  },
+  {
+    "nombre": "Cortaúñas con lima",
+    "descripcion": "Herramienta básica para el cuidado de uñas.",
+    "precio": 4.00,
+    "categoria": "Belleza",
+    "SKU": "BTY-ACC-NCL-FLM",
+    "etiquetas": ["corta uñas", "lima", "cuidado uñas", "belleza", "accesorios"],
+    "proveedor": {"nombre": "Nail Care Tools", "pais": "China"},
+    "variantes": [{"cantidad_inventario": 80}],
+    "fecha_creacion": "2025-02-18T10:00:00Z"
+  }
+])
